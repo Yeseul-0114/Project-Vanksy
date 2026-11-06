@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "name": "Player_PC",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "f71f230c-43c4-4418-92e8-a851d0720a05",
+            "actions": [
+                {
+                    "name": "Toch",
+                    "type": "Button",
+                    "id": "3fd27e95-5fed-4344-8375-af9157ca2af1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "764c42be-1894-4825-89f2-15f19d905fe6",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New Control Scheme",
+            "bindingGroup": "New Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
