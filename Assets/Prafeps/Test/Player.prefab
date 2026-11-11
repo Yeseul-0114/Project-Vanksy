@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8985050876158393348}
   - component: {fileID: 4289633909462823571}
   - component: {fileID: 6360850109923724265}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -156,4 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   _MoveInput: {fileID: 5666950120709858281, guid: 938e55a0a763a914093997948aa61103, type: 3}
-  moveSpeed: 5
+  moveSpeed: 3
