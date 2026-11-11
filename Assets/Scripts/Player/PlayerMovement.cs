@@ -6,11 +6,12 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] protected InputActionReference _MoveInput;
    [SerializeField] private float moveSpeed;
    private Vector2 _moveInput;
-   private Rigidbody2D _rb;
+   private Vector3 _moveDirection;
+   private Rigidbody _rb;
 
    private void Awake()
    {
-      _rb = GetComponent<Rigidbody2D>();
+      _rb = GetComponent<Rigidbody>();
    }
 
    private void OnEnable()
@@ -25,11 +26,19 @@ public class PlayerMovement : MonoBehaviour
 
    private void Update()
    {
-      _moveInput = _MoveInput.action.ReadValue<Vector2>();
+      PlayerMove();
    }
 
    private void FixedUpdate()
    {
-      _rb.velocity = _moveInput.normalized * moveSpeed;
+      _rb.linearVelocity = _moveDirection * moveSpeed;
    }
+   //----------------------------------------------------------------------
+
+   private void PlayerMove()
+   {
+      _moveInput = _MoveInput.action.ReadValue<Vector2>();
+      _moveDirection = new Vector3(_moveInput.x, 0, _moveInput.y).normalized;
+   }
+   
 }
