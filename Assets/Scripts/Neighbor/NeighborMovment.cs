@@ -7,8 +7,7 @@ using Random = UnityEngine.Random;
 
 public class NeighborMovment : MonoBehaviour
 {
-    // [SerializeField] private List<GameObject> _targetPos;
-    [SerializeField] private PosTarget _posTarget;
+    [SerializeField] private List<GameObject> _targetPos = new List<GameObject>(11);
 
     private NavMeshAgent _neighborAgent;
     private Vector3 _targetDirection; // 목적지 좌표. 
@@ -16,7 +15,7 @@ public class NeighborMovment : MonoBehaviour
     private void Awake()
     {
         _neighborAgent = GetComponent<NavMeshAgent>();
-        RandomTarget(); // 나중에 이 부분을 집에서 나오는 걸로 지정하기. 
+        RandomTarget();
     }
     
     private void Update()
@@ -46,7 +45,7 @@ public class NeighborMovment : MonoBehaviour
 
     private void RandomTarget() 
     {
-       _targetDirection = _posTarget.TargetPos[Random.Range(0, _posTarget.TargetPos.Count)].transform.position;
+       _targetDirection = _targetPos[Random.Range(0, _targetPos.Count)].transform.position;
     }
 
 }
