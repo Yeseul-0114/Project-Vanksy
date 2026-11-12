@@ -12,13 +12,20 @@ public class NeighborMovment : MonoBehaviour
 
     private NavMeshAgent _neighborAgent;
     private Vector3 _targetDirection; // 목적지 좌표. 
+    private Animator _animator;
     
     private void Awake()
     {
-        _neighborAgent = GetComponent<NavMeshAgent>();
+        CacheComponent();
         RandomTarget(); // 나중에 이 부분을 집에서 나오는 걸로 지정하기. 
     }
-    
+
+    private void CacheComponent()
+    {
+        _neighborAgent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         MoveTo();
@@ -39,8 +46,10 @@ public class NeighborMovment : MonoBehaviour
     {
         if (IsArrived())
         {
-            yield return new WaitForSeconds(0.4f);
+            _animator.SetBool("isGole", true);
+            yield return new WaitForSeconds(1f);
             RandomTarget();
+            _animator.SetBool("isGole", false);
         }
     }
 

@@ -32,6 +32,5 @@ public class StateMuchin : MonoBehaviour
       _current = state;
       _current.Enter();
    }
-
-
+   
 }
