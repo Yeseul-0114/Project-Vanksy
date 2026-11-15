@@ -26,19 +26,25 @@ public class PlayerMovement : MonoBehaviour
 
    private void Update()
    {
-      PlayerMove();
+      InputMove();
    }
 
    private void FixedUpdate()
    {
-      _rb.linearVelocity = _moveDirection * moveSpeed;
+      Move();
    }
    //----------------------------------------------------------------------
 
-   private void PlayerMove()
+   private void InputMove()
    {
       _moveInput = _MoveInput.action.ReadValue<Vector2>();
       _moveDirection = new Vector3(_moveInput.x, 0, _moveInput.y).normalized;
    }
-   
+
+   private void Move()
+   {
+      _rb.linearVelocity = _moveDirection * moveSpeed;
+      gameObject.transform.rotation = Quaternion.LookRotation(_moveDirection);
+   }
+
 }
