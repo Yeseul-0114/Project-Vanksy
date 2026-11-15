@@ -5,11 +5,18 @@ public class PlayerMovement : MonoBehaviour
 {
    [SerializeField] protected InputActionReference _MoveInput;
    [SerializeField] private float moveSpeed;
+   
    private Vector2 _moveInput;
    private Vector3 _moveDirection;
    private Rigidbody _rb;
-
+   
    private void Awake()
+   {
+      CaChaComponet();
+   }
+
+   private void CaChaComponet()
+   
    {
       _rb = GetComponent<Rigidbody>();
    }
@@ -44,7 +51,9 @@ public class PlayerMovement : MonoBehaviour
    private void Move()
    {
       _rb.linearVelocity = _moveDirection * moveSpeed;
-      gameObject.transform.rotation = Quaternion.LookRotation(_moveDirection);
+      if (_moveDirection != Vector3.zero)
+      {
+         gameObject.transform.rotation = Quaternion.LookRotation(_moveDirection);
+      }
    }
-
 }
