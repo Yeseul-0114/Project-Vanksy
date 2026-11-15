@@ -1104,10 +1104,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Canvas] Joycon'
       objectReference: {fileID: 0}
-    - target: {fileID: 3561164190998707515, guid: 88a33393fbd21084ca75a3c0e4274767, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4863219069600428730, guid: 88a33393fbd21084ca75a3c0e4274767, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1193,6 +1189,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a33393fbd21084ca75a3c0e4274767, type: 3}
+--- !u!1 &333180365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333180366}
+  m_Layer: 11
+  m_Name: PaintVeiw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &333180366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333180365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.66, z: 0.18400002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1767422509}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335772429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 67da40dc53dbdb0469a6fc6a32eb11d8, type: 3}
@@ -2089,7 +2116,7 @@ Transform:
   m_GameObject: {fileID: 531207875}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5462478, y: -0.01063155, z: -0.00037527524, w: 0.8375561}
-  m_LocalPosition: {x: 1.86, y: 22.51, z: -14.18}
+  m_LocalPosition: {x: 1.8600001, y: 22.51, z: -14.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2286,6 +2313,7 @@ MonoBehaviour:
   _paintButton: {fileID: 669762713}
   _moveButton: {fileID: 1360572119}
   _playerMode: {fileID: 1458885753}
+  _paintVeiw: {fileID: 333180366}
 --- !u!114 &669762715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3138,7 +3166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3aec748ba5f6e2428ce4f1b981422d8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.077
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3aec748ba5f6e2428ce4f1b981422d8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3222,6 +3250,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d3aec748ba5f6e2428ce4f1b981422d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1184309092}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d3aec748ba5f6e2428ce4f1b981422d8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333180366}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3aec748ba5f6e2428ce4f1b981422d8, type: 3}
       insertIndex: -1
@@ -4976,6 +5007,7 @@ MonoBehaviour:
   _paintButton: {fileID: 669762713}
   _moveButton: {fileID: 1360572119}
   _playerMode: {fileID: 1458885753}
+  _paintVeiw: {fileID: 333180366}
 --- !u!114 &1360572122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5360,7 +5392,7 @@ GameObject:
   - component: {fileID: 1458885754}
   - component: {fileID: 1458885753}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: PlaterDataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6365,7 +6397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: paint
+  m_text: Move
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7790,14 +7822,14 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1928617395}
   - {fileID: 531207878}
+  - {fileID: 1928617395}
   - {fileID: 133011926}
   - {fileID: 970183017}
-  - {fileID: 320045191}
   - {fileID: 1692491303}
   - {fileID: 1098013806}
-  - {fileID: 281455027}
-  - {fileID: 1962831248}
   - {fileID: 1458885754}
   - {fileID: 810559382}
+  - {fileID: 320045191}
+  - {fileID: 281455027}
+  - {fileID: 1962831248}

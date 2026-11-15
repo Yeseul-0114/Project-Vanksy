@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,9 +7,20 @@ public class ModeController : MonoBehaviour
     [SerializeField] private GameObject _paintButton;
     [SerializeField] private GameObject _moveButton;
     [SerializeField] private PlayerData _playerMode;
+    [SerializeField] private Transform _paintVeiw;
     
-    private bool _canPaint = false;
+    private bool _canPaint = true;
+    private Camera _cam;
+    private Vector3 _mainCamPos;
+    private Quaternion _mainCamRot;
     
+    private void Awake()
+    {
+        _cam = Camera.main;
+        _mainCamPos = _cam.transform.position;
+        _mainCamRot = _cam.transform.rotation;
+    }
+
     private void Start()
     {
         _paintButton.SetActive(true);
@@ -37,6 +49,8 @@ public class ModeController : MonoBehaviour
         _paintButton.SetActive(false);
         _moveButton.SetActive(true);
         // 페인트 모드 
+        _cam.transform.position = _paintVeiw.position;
+        _cam.transform.rotation = _paintVeiw.rotation;
     }
     //---------------------------------------------------
 
@@ -54,6 +68,8 @@ public class ModeController : MonoBehaviour
         _paintButton.SetActive(true);
         _moveButton.SetActive(false);
         // 이동모드로 전환_ 페인트 모드 내리기 
+        _cam.transform.position = _mainCamPos;
+        _cam.transform.rotation = _mainCamRot;
     }
     //---------------------------------------------------
 
