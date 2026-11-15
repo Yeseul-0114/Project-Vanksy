@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
    private void Move()
    {
       _rb.linearVelocity = _moveDirection * moveSpeed;
+      
       if (_moveDirection != Vector3.zero)
       {
          gameObject.transform.rotation = Quaternion.LookRotation(_moveDirection);
