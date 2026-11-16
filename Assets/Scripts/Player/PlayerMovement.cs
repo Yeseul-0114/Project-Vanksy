@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] protected InputActionReference _MoveInput;
    [SerializeField] private float moveSpeed;
    
+   private Animator _animator;
    private Vector2 _moveInput;
    private Vector3 _moveDirection;
    private Rigidbody _rb;
@@ -16,9 +17,9 @@ public class PlayerMovement : MonoBehaviour
    }
 
    private void CaChaComponet()
-   
    {
       _rb = GetComponent<Rigidbody>();
+      _animator = GetComponent<Animator>();
    }
 
    private void OnEnable()
@@ -54,7 +55,12 @@ public class PlayerMovement : MonoBehaviour
       
       if (_moveDirection != Vector3.zero)
       {
+         _animator.SetInteger("Walk", 1);
          gameObject.transform.rotation = Quaternion.LookRotation(_moveDirection);
+      }
+      else if (_moveDirection == Vector3.zero)
+      {
+         _animator.SetInteger("Walk", 0);
       }
    }
 }
