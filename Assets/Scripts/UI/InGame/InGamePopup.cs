@@ -6,11 +6,6 @@ public class InGamePopup : MonoBehaviour
     [SerializeField] private Canvas _MiniMap;
     [SerializeField] private Canvas _settings;
 
-    private void Awake()
-    {
-        _MiniMap.gameObject.SetActive(false);
-    }
-
     public void MapPopup()
     {
         _MiniMap.gameObject.SetActive(true);
@@ -35,6 +30,7 @@ public class InGamePopup : MonoBehaviour
 
     public void LoadLobyScense()
     {
+        _MiniMap.gameObject.SetActive(false);
         SceneManager.LoadScene("Lobby");
     }
 }
