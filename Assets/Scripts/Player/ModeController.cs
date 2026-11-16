@@ -10,7 +10,7 @@ public class ModeController : MonoBehaviour
     [SerializeField] private ModeChanger _modeChanger;
     [SerializeField] private GameObject _CamMove;
     
-    private bool _canPaint = true;
+    public bool _canPaint = false;
     private Camera _cam;
     private Vector3 _mainCamPos;
     private Quaternion _mainCamRot;
