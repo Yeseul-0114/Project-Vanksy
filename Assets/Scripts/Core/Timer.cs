@@ -19,7 +19,6 @@ public class TimeManager : MonoBehaviour
     
     private void Start()
     {
-        StartCoroutine(TimeOut());
         StartCoroutine(DayCycle());
     }
 
@@ -33,13 +32,13 @@ public class TimeManager : MonoBehaviour
         _playTime -= Time.deltaTime;
         int _tempTime = (int)_playTime;
         _TimeText.text = $"남은 시간 : {_tempTime.ToString()}";
-    }
 
-    private IEnumerator TimeOut()
-    {
-        yield return new WaitForSeconds(_playTime);
-        Time.timeScale = 0;
-        _Ending.gameObject.SetActive(true);
+        if (_playTime <= 0)
+        {
+            Time.timeScale = 0;
+            _Ending.gameObject.SetActive(true);
+        }
+        
     }
     
     //-------------------------------------------------------
