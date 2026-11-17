@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebaf33330be19044c84259432435ab79, type: 3}
+  m_Name: Blue_PosTarget
+  m_EditorClassIdentifier: Assembly-CSharp::PosTarget
+  _targetPos:
+  - {fileID: 1199476957082086769, guid: f815481967650ea42b7b6ae772fb778e, type: 3}
+  - {fileID: 3306189512328671750, guid: e43c5da63d0ca154aa230fada2c1cf9b, type: 3}
+  - {fileID: 7893260393101759507, guid: 8f17e97e425c6974780a92b31178af90, type: 3}
+  - {fileID: 3566935527573506818, guid: fced7693ecdf52f48abd0bb0540265f5, type: 3}
+  - {fileID: 660753632791118254, guid: 254e3fce438336e408a1a1bcec1a25bb, type: 3}
+  - {fileID: 5357454746516685364, guid: a1b16d1a652135443a202e2e940f2ab3, type: 3}
+  _startPos: {fileID: 0}
+  _endPos: {fileID: 0}
