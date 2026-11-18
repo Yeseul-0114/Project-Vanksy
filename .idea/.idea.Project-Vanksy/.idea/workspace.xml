@@ -11,8 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6379fde1-58b6-4c29-bdd0-9ffb527f6fc2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintTexture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintTexture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/MoveController.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/MoveController.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/Player_PC.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/Player_PC.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prafeps/Bildings/Tree1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prafeps/Bildings/Tree1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/Painting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painting/Painting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ModeController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,60 +47,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000108563859353" />
-      <entry key="S2" value="1.258910020466317" />
-      <entry key="S5" value="3.2698661082000458" />
-      <entry key="S10" value="5.937823465598629" />
-      <entry key="S30" value="10.533702332683676" />
-      <entry key="S60" value="14.599681796901033" />
-      <entry key="M2" value="19.707854387798236" />
-      <entry key="M5" value="25.63909041474581" />
-      <entry key="M10" value="28.976704441181333" />
-      <entry key="M15" value="33.15922165233282" />
-      <entry key="M30" value="62.418885801252024" />
-      <entry key="H1" value="152.74627186806876" />
-      <entry key="H2" value="332.6838652677969" />
-      <entry key="H4" value="594.9495024507278" />
-      <entry key="D1" value="1176.750283778205" />
-      <entry key="W1" value="1357.1648733699274" />
+      <entry key="MS500" value="1.0000021251557365" />
+      <entry key="S2" value="1.038181034729105" />
+      <entry key="S5" value="1.2714459557228217" />
+      <entry key="S10" value="1.6171255165260914" />
+      <entry key="S30" value="5.192322570292624" />
+      <entry key="S60" value="11.32436546122952" />
+      <entry key="M2" value="21.52777781042463" />
+      <entry key="M5" value="42.51077859313593" />
+      <entry key="M10" value="64.72677495913103" />
+      <entry key="M15" value="79.55130117339155" />
+      <entry key="M30" value="117.56834019664353" />
+      <entry key="H1" value="206.83962382169926" />
+      <entry key="H2" value="386.1349648731631" />
+      <entry key="H4" value="653.6027409466043" />
+      <entry key="D1" value="1259.8703745265389" />
+      <entry key="W1" value="1450.2081961987703" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.2650953360419133E-233" />
-      <entry key="MS500" value="2.63284111231067E-47" />
-      <entry key="S2" value="2.2651981998117092E-12" />
-      <entry key="S5" value="2.2020084580207603E-5" />
-      <entry key="S10" value="0.004939794683724611" />
-      <entry key="S30" value="0.266565677135994" />
-      <entry key="S60" value="0.8931131262864782" />
-      <entry key="M2" value="1.7877186247896808" />
-      <entry key="M5" value="2.850007633427477" />
-      <entry key="M10" value="3.4152299403416047" />
-      <entry key="M15" value="3.9334515524657427" />
-      <entry key="M30" value="7.441265651322849" />
-      <entry key="H1" value="19.876687085533053" />
-      <entry key="H2" value="46.827525700992" />
-      <entry key="H4" value="87.24717776784367" />
-      <entry key="D1" value="177.61909636652442" />
-      <entry key="W1" value="205.72483653819137" />
+      <entry key="MS100" value="4.254298973971973E-15" />
+      <entry key="MS500" value="0.0013358743202172758" />
+      <entry key="S2" value="0.19117953473537294" />
+      <entry key="S5" value="0.5159187010865095" />
+      <entry key="S10" value="0.7216100231606274" />
+      <entry key="S30" value="1.1680362045358483" />
+      <entry key="S60" value="2.231684543424584" />
+      <entry key="M2" value="4.816026899362291" />
+      <entry key="M5" value="9.963232561461671" />
+      <entry key="M10" value="14.228743996832875" />
+      <entry key="M15" value="16.65389779316775" />
+      <entry key="M30" value="21.91233097938165" />
+      <entry key="H1" value="34.25443811485544" />
+      <entry key="H2" value="60.87922514725569" />
+      <entry key="H4" value="101.88161766549094" />
+      <entry key="D1" value="195.8218902234588" />
+      <entry key="W1" value="225.42769789389166" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.555825153988317E-4" />
-      <entry key="MS500" value="0.2146518547403514" />
-      <entry key="S2" value="0.9298509590950167" />
-      <entry key="S5" value="3.0751797504165905" />
-      <entry key="S10" value="5.796661298675086" />
-      <entry key="S30" value="10.653272915141141" />
-      <entry key="S60" value="15.337316375241322" />
-      <entry key="M2" value="21.368613704703936" />
-      <entry key="M5" value="28.4175840451616" />
-      <entry key="M10" value="32.3511235469023" />
-      <entry key="M15" value="37.0628011313249" />
-      <entry key="M30" value="69.83738342974155" />
-      <entry key="H1" value="172.59926973006264" />
-      <entry key="H2" value="379.48656149004967" />
-      <entry key="H4" value="682.1739773358513" />
-      <entry key="D1" value="1354.3614321829593" />
-      <entry key="W1" value="1562.8883808133794" />
+      <entry key="MS100" value="0.0059207678379312465" />
+      <entry key="MS500" value="0.35878183026893296" />
+      <entry key="S2" value="0.9331003473648118" />
+      <entry key="S5" value="1.587428319625744" />
+      <entry key="S10" value="2.2055567411961663" />
+      <entry key="S30" value="6.280326118914194" />
+      <entry key="S60" value="13.46732763935481" />
+      <entry key="M2" value="26.235999002019938" />
+      <entry key="M5" value="52.37094888280117" />
+      <entry key="M10" value="78.8714122370415" />
+      <entry key="M15" value="96.13516516839425" />
+      <entry key="M30" value="139.4312612399024" />
+      <entry key="H1" value="241.05585116072152" />
+      <entry key="H2" value="446.98183686885886" />
+      <entry key="H4" value="755.457670418421" />
+      <entry key="D1" value="1455.6834933895107" />
+      <entry key="W1" value="1675.6344376389923" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -206,6 +211,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Painting/PaintTexture.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Hub\Project-Vanksy\Assets\Scripts\Painting\PaintTexture.cs" containingFunctionPresentation="메서드 'Update'">
+            <startOffsets>
+              <option value="1778" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1806" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

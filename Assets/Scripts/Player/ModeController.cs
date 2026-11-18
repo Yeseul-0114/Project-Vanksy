@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ModeController : MonoBehaviour
 {
-    [SerializeField] private PlayerData _playerMode;
+    [SerializeField] private PlayerData _playerData;
     [SerializeField] private Transform _paintVeiw;
     [SerializeField] private ModeChanger _modeChanger;
     [SerializeField] private GameObject _CamMove;
@@ -30,7 +30,7 @@ public class ModeController : MonoBehaviour
         }
         else
         {
-            _playerMode._isPaintMode = true;
+            _playerData._isPaintMode = true;
             Debug.Log("ModeController : 페인트 모드로 들어갑니다.");
             StartCoroutine(ToPaintMode());
         }
@@ -50,7 +50,7 @@ public class ModeController : MonoBehaviour
 
     public void MoveMode()
     {
-        _playerMode._isPaintMode = false;
+        _playerData._isPaintMode = false;
         Debug.Log("ModeController : 이동 모드로 들어갑니다.");
         StartCoroutine(ToMoveMode());
     }

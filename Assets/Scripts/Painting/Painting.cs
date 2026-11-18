@@ -1,23 +1,50 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class Painting : MonoBehaviour
 {
-    [Range(0.01f, 1f)]
+    [SerializeField] private PlayerData _playerData;
+    [FormerlySerializedAs("_Click")] [SerializeField] private InputActionReference _click;
+    [SerializeField] private InputActionReference _brushPos;
+    
     [SerializeField] private float _brushSize = 0.03f;
     [SerializeField] private Texture2D _brushTexture;
 
     private Texture2D _mainTex;
     private MeshRenderer _mr;
     private RenderTexture _rt;
+    private Camera _cam;
 
     private void Awake()
     {
         MrSetting();
+        CaChaCamera();
     }
 
     private void Update()
     {
-        
+        ModeCheck();
+    }
+
+    private void ModeCheck()
+    {
+        if (_playerData._isPaintMode)
+        {
+            _click.action.Enable();
+            _brushPos.action.Enable();
+           // _click.action.performed += 
+        }
+        else
+        {
+            
+        }
+    }
+
+    private void CaChaCamera()
+    {
+        _cam = Camera.main;
     }
 
     private void MrSetting()
@@ -50,6 +77,11 @@ public class Painting : MonoBehaviour
             }
             _brushTexture.Apply();
         }
+    }
+
+    private void ReadClick(InputAction.CallbackContext context)
+    {
+        Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
     }
 
     private void ToPainting()
