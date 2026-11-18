@@ -52,6 +52,7 @@ public class ModeController : MonoBehaviour
         // 카메라 시점 페인트모드로 변경
         _cam.transform.position = _paintVeiw.position;
         _cam.transform.rotation = _paintVeiw.rotation;
+        _cam.fieldOfView += 40;
     }
 
     public IEnumerator ToMoveMode()
@@ -68,6 +69,7 @@ public class ModeController : MonoBehaviour
         //카메라 시점 원복
         _cam.transform.position = _mainCamPos;
         _cam.transform.rotation = _mainCamRot;
+        _cam.fieldOfView -= 40;
     }
     
     private void CachaComponent()
