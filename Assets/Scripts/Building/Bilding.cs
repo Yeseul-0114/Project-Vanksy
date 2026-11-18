@@ -3,13 +3,18 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
+    [SerializeField] private ModeController _modeController;
     [SerializeField] private ModeButton _playermode;
+   // [SerializeField] private PlayerData _data;
     [SerializeField] private bool _isClear; // 페인트완료 되면 여기 바꿔줘야함. 
     private Outline _outLine;
+    private Painting _painting;
 
+    
     private void Awake()
     {
         CachaComponent();
+        _painting = GetComponent<Painting>();
     }
 
     private void CachaComponent()
@@ -26,7 +31,13 @@ public class Building : MonoBehaviour
         {
             _outLine.enabled = true;
             _playermode._canPaint = true;
+            _modeController.PaintModeEvent += OnPaint;
         }
+    }
+
+    private void OnPaint()
+    {
+        _painting.enabled = true;
     }
 
     private void OnTriggerExit(Collider other) // 벽 칠하지 않고 지나쳤을 때
@@ -35,6 +46,7 @@ public class Building : MonoBehaviour
         {
             _outLine.enabled = false;
             _playermode._canPaint = false;
+            _modeController.PaintModeEvent -= OnPaint;
         }
     }
     

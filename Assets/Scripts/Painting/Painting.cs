@@ -49,8 +49,6 @@ public class Painting : MonoBehaviour
         _clickPos.action.Enable();
         _click.action.performed += OnClick;
         _click.action.canceled += DisClick;
-        
-        this.enabled = true;
     }
 
     private void OutPainting()
