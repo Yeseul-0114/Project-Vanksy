@@ -84,6 +84,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c71982ca59b2e4f448a033ff9de12fb4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8745382065807832112}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c71982ca59b2e4f448a033ff9de12fb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6144074903783907756}
   m_SourcePrefab: {fileID: 100100000, guid: c71982ca59b2e4f448a033ff9de12fb4, type: 3}
 --- !u!1 &2596223923820768409 stripped
 GameObject:
@@ -165,3 +168,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.02195934
   m_Center: {x: 0.00008668008, y: 0.00096112315, z: -0.01}
+--- !u!114 &6144074903783907756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2596223923820768409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37515bf3b28e3e6488d6d5bb83f969b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Painting
+  _modeController: {fileID: 0}
+  _click: {fileID: -4769336082963040193, guid: 938e55a0a763a914093997948aa61103, type: 3}
+  _clickPos: {fileID: -3070591953510326043, guid: 938e55a0a763a914093997948aa61103, type: 3}
+  _resolution: 512
+  _brushSize: 0.03
+  _brushTexture: {fileID: 0}

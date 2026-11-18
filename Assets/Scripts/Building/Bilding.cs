@@ -24,7 +24,6 @@ public class Building : MonoBehaviour
         // 클리어되지 않은 벽 앞에 있으면
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && !_isClear)
         {
-            Debug.Log("페인팅 가능.");
             _outLine.enabled = true;
             _playermode._canPaint = true;
         }
@@ -38,7 +37,5 @@ public class Building : MonoBehaviour
             _playermode._canPaint = false;
         }
     }
-    
-    //--------------------------------------------
     
 }
