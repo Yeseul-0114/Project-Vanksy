@@ -5,10 +5,12 @@ using UnityEngine.Serialization;
 
 public class Painting : MonoBehaviour
 {
-    [SerializeField] private PlayerData _playerData;
-    [FormerlySerializedAs("_Click")] [SerializeField] private InputActionReference _click;
+    [Header("기본 세팅")]
+    [SerializeField] private ModeController _modeController;
+    [SerializeField] private InputActionReference _click;
     [SerializeField] private InputActionReference _brushPos;
     
+    [Header("브러쉬 세팅")]
     [SerializeField] private float _brushSize = 0.03f;
     [SerializeField] private Texture2D _brushTexture;
 
@@ -23,28 +25,29 @@ public class Painting : MonoBehaviour
         CaChaCamera();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        ModeCheck();
+        _modeController.PaintModeEvent += ModeCheck;
+        // _modeChanger.MoveModeEvent
     }
 
-    private void ModeCheck()
+    private void OnDisable()
     {
-        if (_playerData._isPaintMode)
-        {
+    }
+
+
+    private void ModeCheck() // 이벤트로 구독해둬서 이제 페인트모드일 때 실행됨.
+    {
             _click.action.Enable();
             _brushPos.action.Enable();
            // _click.action.performed += 
-        }
-        else
-        {
-            
-        }
+       
     }
 
     private void CaChaCamera()
     {
         _cam = Camera.main;
+        
     }
 
     private void MrSetting()

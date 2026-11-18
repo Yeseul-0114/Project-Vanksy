@@ -1,0 +1,30 @@
+using System;
+using System.Collections;
+using TMPro;
+using UnityEngine;
+
+public class ModeButton : MonoBehaviour
+{
+    // 이 스크립트는 버튼 입력받았을 때 실행되는 것
+    // setactive로 꺼질 위험이 있음.
+    
+    [SerializeField] private ModeController _modeButton;
+    public bool _canPaint = false;
+    
+    public void PaintMode()
+    {
+        if (!_canPaint)
+        {
+            Debug.Log("낙서 할 수 있는 벽이 없습니다.");
+        }
+        else
+        {
+            _modeButton.PaintMode();
+        }
+    }
+
+    public void MoveMode()
+    {
+        _modeButton.MoveMode();
+    }
+}
