@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MiniMap : MonoBehaviour
 {
-    [SerializeField] private Canvas _ground;
-    [SerializeField] private Canvas _player;
+    [SerializeField] private Image _ground;
+    [SerializeField] private Image _player;
  //   [SerializeField] private Canvas _Bilding;
 
     private void OnEnable()
