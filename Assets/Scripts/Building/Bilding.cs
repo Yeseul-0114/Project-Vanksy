@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    [SerializeField] private ModeController _modeController;
-    [SerializeField] private ModeButton _playermode;
+    [SerializeField] public ModeController _modeController;
+    [SerializeField] public ModeButton _playermode;
     [SerializeField] public bool _isClear; // 페인트완료 되면 여기 바꿔줘야함. 
     private Outline _outLine;
     private Painting _painting;

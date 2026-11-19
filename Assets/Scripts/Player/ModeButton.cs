@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ModeButton : MonoBehaviour
 {
     // 이 스크립트는 버튼 입력받았을 때 실행되는 것
     // setactive로 꺼질 위험이 있음.
     
-    [SerializeField] private ModeController _modeButton;
+    [SerializeField] private ModeController _modeController;
     public bool _canPaint = false;
     
     public void PaintMode()
@@ -19,12 +20,12 @@ public class ModeButton : MonoBehaviour
         }
         else
         {
-            _modeButton.PaintMode();
+            _modeController.PaintMode();
         }
     }
 
     public void MoveMode()
     {
-        _modeButton.MoveMode();
+        _modeController.MoveMode();
     }
 }
