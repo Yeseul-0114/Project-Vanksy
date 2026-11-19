@@ -8,7 +8,7 @@ public class IdleState : StateBase
 
     public override void Enter()
     {
-        Debug.Log("idleState : 주민은 멍때립니다..");
+       // Debug.Log("idleState : 주민은 낙서로 골치아픕니다..");
         _neiController._animator.SetBool("isGole", true);
     }
 
@@ -16,7 +16,7 @@ public class IdleState : StateBase
     { 
         _neiController.StartCoroutine(_neiController.SetTarget());
         
-        if (_neiController._tagetMarking) // 주민 발견
+        if (_neiController._playerMarking) // 주민 발견
         {
             _neiController.SetState(_neiController.Tracking); // 트레킹 상태로 전이
         }

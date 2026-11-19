@@ -7,11 +7,18 @@ using Random = UnityEngine.Random;
 public class NeighborController : MonoBehaviour, IStateEvent
 {
     [SerializeField] private PosTarget _posTarget;
+    [SerializeField] private float _detectRange;
+    [SerializeField] private PlayerMovement _player;
 
+    private float _playerSpeed;
+    public bool _arrest; // 범인 잡았니
+    private Transform _playerTaget; // 범인
+    internal bool _playerMarking; // 타겟 감지했음
+    internal Transform _lastBildingPos; // 범행현장
+    
     internal NavMeshAgent _neighborAgent;
     internal Vector3 _targetDirection; // 목적지 좌표. 
     internal Animator _animator;
-    internal bool _tagetMarking; // 타겟 감지했음
     //====================================================
    
     private StateBase _idle;
@@ -36,6 +43,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
     }
     private void CacheComponent()
     {
+        _playerSpeed = _player.moveSpeed;
         _neighborAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
@@ -63,14 +71,16 @@ public class NeighborController : MonoBehaviour, IStateEvent
         // 주민이고, 페인트 모드라면.
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && PlayerData.Instance._isPaintMode)
         {
-            Debug.Log($"{other.gameObject.name}가 낙서범을 발견했습니다.");
-            _tagetMarking = true;
+            Debug.Log($"{other.gameObject.name}가 범인을 발견했습니다.");
+            _lastBildingPos = other.transform;
+            _playerMarking = true;
+            _playerTaget = other.transform;
         }
     }
 
     public IEnumerator SetTarget()
     {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.5f);
             _targetDirection = _posTarget.TargetPos[Random.Range(0, _posTarget.TargetPos.Count)].transform.position;
             SetState(Walking);
     }
@@ -80,4 +90,55 @@ public class NeighborController : MonoBehaviour, IStateEvent
         return !_neighborAgent.pathPending && _neighborAgent.remainingDistance <= _neighborAgent.stoppingDistance;
     }
     
+    //=========================================
+
+    public void ChasePlayer() // 플레이어 쫒기
+    {
+        float distance = Vector3.Distance(transform.position,_playerTaget.position);
+
+        if (distance <= _detectRange) // 감지범위 밖- 놓침
+        {
+            _arrest = false;
+            _neighborAgent.ResetPath();
+            _playerMarking = false;
+            SetState(Anger);
+        }
+        _neighborAgent.SetDestination(_playerTaget.position); // 플레이어를 타겟으로 쫒아감.
+        
+        /*if (!_neighborAgent.pathPending && _neighborAgent.remainingDistance <= _neighborAgent.stoppingDistance) //잡았음
+        {
+            _playerMarking = false;
+            _arrest = true;
+            _player.moveSpeed = 0;
+            SetState(Anger);
+        }*/
+    }
+
+    public IEnumerator AfterAnger()
+    {
+        yield return new WaitForSeconds(3f);
+        if (_arrest) // 잡았다면
+        {
+            Debug.Log("범인 검거함!");
+            // 건물 페인트 초기화
+            // 페인트 통 1개 압수
+        }
+        else // 놓쳤다면
+        {
+            Debug.Log("범인 놓쳤음!");
+            //건물 페인트 초기화
+        }
+        _player.moveSpeed = _playerSpeed;
+        _animator.SetBool("isAnger", false);
+        _neighborAgent.SetDestination(_lastBildingPos.position);
+       // _animator.SetBool("isDone", true);
+       // StartCoroutine(AngerToReturn());
+    }
+
+    public IEnumerator AngerToReturn()
+    {
+        yield return new WaitForSeconds(3f);
+        _targetDirection = _posTarget.TargetPos[Random.Range(0, _posTarget.TargetPos.Count)].transform.position;
+        SetState(Walking);
+    }
 }

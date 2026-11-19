@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
    [SerializeField] protected InputActionReference _MoveInput;
-   [SerializeField] private float moveSpeed;
+   public float moveSpeed;
    
    private Animator _animator;
    private Vector2 _moveInput;
@@ -62,5 +62,10 @@ public class PlayerMovement : MonoBehaviour
       {
          _animator.SetInteger("Walk", 0);
       }
+   }
+
+   private void Animate()
+   {
+     // _animator.SetBool("");
    }
 }

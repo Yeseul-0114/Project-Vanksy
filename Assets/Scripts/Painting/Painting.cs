@@ -117,7 +117,7 @@ public class Painting : MonoBehaviour
         // 브러시 텍스쳐가 없을 경우 임시 생성
         if (_brushTexture == null)
         {
-            Debug.Log("브러쉬 텍스처가 없습니다, 임시 텍스처를 적용합니다.");
+            // Debug.Log("브러쉬 텍스처가 없습니다, 임시 텍스처를 적용합니다.");
             _brushTexture = new Texture2D(_resolution, _resolution);
             for (int i = 0; i < _resolution; i++)
             {

@@ -56,7 +56,6 @@ public class ModeController : MonoBehaviour
 
     public IEnumerator ToMoveMode()
     {
-        _mainCamMove.GetComponent<CameraMove>().enabled = true;
         Debug.Log("ModeController : 이동 모드로 들어갑니다.");
         
         // 페인트 들어올리는 애니메이션 실행
@@ -65,10 +64,11 @@ public class ModeController : MonoBehaviour
         _PaintButton.SetActive(true);
         _MoveButton.SetActive(false);
         
-        //카메라 시점 원복
+        _cam.fieldOfView -= 40;
         _cam.transform.position = _mainCamPos;
         _cam.transform.rotation = _mainCamRot;
-        _cam.fieldOfView -= 40;
+        _mainCamMove.GetComponent<CameraMove>().enabled = true;
+        
     }
     
     private void CachaComponent()

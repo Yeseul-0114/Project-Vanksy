@@ -19,7 +19,7 @@ public class TimeManager : MonoBehaviour
     
     private void Start()
     {
-        StartCoroutine(DayCycle());
+        // StartCoroutine(DayCycle());
     }
 
     private void Update()
@@ -43,7 +43,7 @@ public class TimeManager : MonoBehaviour
     
     //-------------------------------------------------------
 
-    private IEnumerator DayCycle()
+    /*private IEnumerator DayCycle()
     {
         for (int i = 0; i <= 2; i++)
         {
@@ -55,5 +55,5 @@ public class TimeManager : MonoBehaviour
             yield return new WaitForSeconds(_nightTime);
         }
         Debug.Log("게임 종료");
-    }
+    }*/
 }
