@@ -5,7 +5,6 @@ public class Building : MonoBehaviour
 {
     [SerializeField] private ModeController _modeController;
     [SerializeField] private ModeButton _playermode;
-   // [SerializeField] private PlayerData _data;
     [SerializeField] private bool _isClear; // 페인트완료 되면 여기 바꿔줘야함. 
     private Outline _outLine;
     private Painting _painting;

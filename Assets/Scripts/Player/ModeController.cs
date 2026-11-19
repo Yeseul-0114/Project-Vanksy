@@ -8,7 +8,6 @@ public class ModeController : MonoBehaviour
     [Header("모드 버튼")]
     [SerializeField] private GameObject _PaintButton;
     [SerializeField] private GameObject _MoveButton;
-    [SerializeField] private PlayerData _playerData;
     
     [Header("카메라 세팅")]
     [SerializeField] private GameObject _mainCamMove;
@@ -29,13 +28,13 @@ public class ModeController : MonoBehaviour
     public void PaintMode()
     {
         StartCoroutine(ToPaintMode());
-        _playerData._isPaintMode = true;
+        PlayerData.Instance._isPaintMode = true;
     }
 
     public void MoveMode()
     {
         StartCoroutine(ToMoveMode());
-        _playerData._isPaintMode = false;
+        PlayerData.Instance._isPaintMode = false;
     }
 
     public IEnumerator ToPaintMode()

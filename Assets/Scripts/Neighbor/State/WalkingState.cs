@@ -17,7 +17,9 @@ public class WalkingState : StateBase
        // 애니메이션 재생
        // 전이 조건 체크
        // 컨트롤러.SetState 로 전이
+       _neiController.SetState(_neiController.Tracking); 
     }
+    
 
     public override void Exit()
     {
