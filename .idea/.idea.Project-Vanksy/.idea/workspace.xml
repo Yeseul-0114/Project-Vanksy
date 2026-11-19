@@ -12,8 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6379fde1-58b6-4c29-bdd0-9ffb527f6fc2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/Bilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Building/Bilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ModeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ModeButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGame/MiniMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGame/MiniMap.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
