@@ -1,3 +1,4 @@
+/*
 using System;
 using System.Collections;
 using UnityEngine;
@@ -6,7 +7,6 @@ using Random = UnityEngine.Random;
 
 public class NeighborMovment : MonoBehaviour
 {
-    // [SerializeField] private List<GameObject> _targetPos;
     [SerializeField] private PosTarget _posTarget;
 
     private NavMeshAgent _neighborAgent;
@@ -58,3 +58,4 @@ public class NeighborMovment : MonoBehaviour
     }
 
 }
+*/

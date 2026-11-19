@@ -3,7 +3,7 @@ using UnityEngine;
 public class StateMuchin : MonoBehaviour
 {
    private StateBase _current;
-   private IStateEvent _stateEvent;
+   [SerializeField] private IStateEvent _stateEvent;
 
    private void Awake()
    {
@@ -26,9 +26,7 @@ public class StateMuchin : MonoBehaviour
    private void ChangeState(StateBase state)
    {
       if (state == null || _current == state) return;
-      if (_current != null) return;
-
-      _current.Exit();
+      if (_current != null) _current.Exit();
       _current = state;
       _current.Enter();
    }
