@@ -20,7 +20,7 @@ public class ReFillPaint : MonoBehaviour
         }
     }
 
-    public void GetPaint()
+    public void GetPaint() // 이거 페인트 버튼에 실행하게 해야하는데 문제는 그 버튼이 꺼지는 버튼임-> 수정해야함
     {
         if (!PlayerData.Instance._isStorage) return;
         StartCoroutine("getPaint");
@@ -36,7 +36,7 @@ public class ReFillPaint : MonoBehaviour
         }
         else
         {
-            _storagePopup[1].SetActive(true); 
+            _storagePopup[1].SetActive(true); // 여기에 아예 채우기 버튼을 넣자. 
             
             _Click.action.Enable();
             _Click.action.performed += StartFill;
@@ -50,12 +50,11 @@ public class ReFillPaint : MonoBehaviour
         _isFill = true;
     }
 
-    private void FillPaint()
+    private void FillPaint() // 누르는 동안 페인트 리필
     {
         for (int i = 0; i < 3; i++)
         {
-            if (_paintCan[i].fillAmount >= 1) return;
-            _paintCan[i].fillAmount += Time.deltaTime;
+          
         }
     }
 
