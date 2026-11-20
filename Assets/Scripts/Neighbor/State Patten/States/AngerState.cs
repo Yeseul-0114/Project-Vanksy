@@ -20,7 +20,6 @@ public class AngerState : StateBase
 
     public override void Exit()
     {
-      
+        PlayerData.Instance._isDiscover =  false; // 혐의 풀림
     }
-    
 }

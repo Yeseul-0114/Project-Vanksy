@@ -8,6 +8,8 @@ public class TrackingState : StateBase
 
     public override void Enter()
     {
+        PlayerData.Instance._isDiscover = true;
+        
         Debug.Log("범인을 추격합니다.");
         _neiController._animator.SetBool("PlayerTarget", true);
         _neiController._neighborAgent.ResetPath();
