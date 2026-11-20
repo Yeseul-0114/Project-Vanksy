@@ -8,17 +8,20 @@ public class Building : MonoBehaviour
     [SerializeField] public bool _isClear; // 페인트완료 되면 여기 바꿔줘야함. 
     private Outline _outLine;
     private Painting _painting;
+    private MeshRenderer _meshRenderer;
 
     public event Action OnClearEvent;
     
     private void Awake()
     {
         CachaComponent();
-        _painting = GetComponent<Painting>();
+        
     }
 
     private void CachaComponent()
     {
+        _painting = GetComponent<Painting>();
+        _meshRenderer = GetComponent<MeshRenderer>();
         _outLine = GetComponent<Outline>();
         _isClear = false;
         _outLine.enabled = false;
@@ -38,6 +41,7 @@ public class Building : MonoBehaviour
     private void OnPaint()
     {
         _painting.enabled = true;
+        PlayerData.Instance._currentBuildingMR = _meshRenderer;
     }
 
     private void OnTriggerExit(Collider other) // 벽 칠하지 않고 지나쳤을 때

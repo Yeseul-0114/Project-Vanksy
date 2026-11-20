@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PaintPointManager : MonoBehaviour
+public class PointManager : MonoBehaviour
 {
     [SerializeField] private int _totalBildings;
     [SerializeField] private int _clearBildings;
