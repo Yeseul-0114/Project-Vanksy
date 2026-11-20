@@ -3,34 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class InGamePopup : MonoBehaviour
 {
-    [SerializeField] private Canvas _MiniMap;
-    [SerializeField] private Canvas _settings;
+    [SerializeField] private GameObject _MiniMap;
+    [SerializeField] private GameObject _settings;
 
     public void MapPopup()
     {
-        _MiniMap.gameObject.SetActive(true);
+        _MiniMap.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void CloseMapPopup()
     {
-        _MiniMap.gameObject.SetActive(false);
+        _MiniMap.SetActive(false);
         Time.timeScale = 1;
     }
     
     public void SettingPopup()
     {
-        _settings.gameObject.SetActive(true);
+        _settings.SetActive(true);
     }
 
     public void CloseSettingPopup()
     {
-        _settings.gameObject.SetActive(false);
+        _settings.SetActive(false);
     }
 
     public void LoadLobyScense()
     {
-        _MiniMap.gameObject.SetActive(false);
+        _MiniMap.SetActive(false);
         SceneManager.LoadScene("Lobby");
     }
 }

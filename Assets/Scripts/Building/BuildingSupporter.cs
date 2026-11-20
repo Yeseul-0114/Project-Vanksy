@@ -6,6 +6,7 @@ public class BuildingSupporter : MonoBehaviour
     [SerializeField] private ModeButton _button;
     
     private Building[] _buildings;
+    // private Painting[] _paintings;
 
     private void Awake() => CacheComponents();
     private void Start() => ReleasePlayerComponent();
@@ -13,6 +14,7 @@ public class BuildingSupporter : MonoBehaviour
     private void CacheComponents()
     {
         _buildings = GetComponentsInChildren<Building>();
+       // _paintings = GetComponentsInChildren<Painting>();
     }
 
     private void ReleasePlayerComponent()
@@ -22,5 +24,10 @@ public class BuildingSupporter : MonoBehaviour
             b._modeController = _controller;
             b._playermode = _button;
         }
+
+        /*foreach (Painting p in _paintings)
+        {
+            p._modeController = _controller;
+        }*/
     }
 }

@@ -12,6 +12,7 @@ public class ModeController : MonoBehaviour
     [Header("카메라 세팅")]
     [SerializeField] private GameObject _mainCamMove;
     [SerializeField] private Transform _paintVeiw;
+    [SerializeField] private GameObject _neviMap;
     
     private Camera _cam;
     private Vector3 _mainCamPos;
@@ -29,12 +30,14 @@ public class ModeController : MonoBehaviour
     {
         StartCoroutine(ToPaintMode());
         PlayerData.Instance._isPaintMode = true;
+        _neviMap.SetActive(true);
     }
 
     public void MoveMode()
     {
         StartCoroutine(ToMoveMode());
         PlayerData.Instance._isPaintMode = false;
+        _neviMap.SetActive(false);
     }
 
     public IEnumerator ToPaintMode()

@@ -11,7 +11,7 @@ public class NeiAlarm : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Nei") &&  PlayerData.Instance._isPaintMode)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Neighbor") &&  PlayerData.Instance._isPaintMode)
         {
             _direction = other.transform.position;
             Vector3 _playerDirection = gameObject.transform.position;

@@ -6,7 +6,8 @@ using UnityEngine.Serialization;
 public class Painting : MonoBehaviour
 {
     [Header("기본 세팅")]
-    [SerializeField] private ModeController _modeController;
+    [SerializeField]
+    public ModeController _modeController;
     [SerializeField] private InputActionReference _click;
     [SerializeField] private InputActionReference _clickPos;
 
