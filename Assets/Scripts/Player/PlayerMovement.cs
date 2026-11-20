@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] protected InputActionReference _MoveInput;
   // public float moveSpeed;
    
+  private Camera _camera;
    private Animator _animator;
    private Vector2 _moveInput;
    private Vector3 _moveDirection;
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
    {
       _rb = GetComponent<Rigidbody>();
       _animator = GetComponent<Animator>();
+      _camera = Camera.main;
    }
 
    private void OnEnable()
@@ -51,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
 
    private void Move()
    {
+      if (PlayerData.Instance._isPaintMode)
+      {
+         _camera.transform.position += new Vector3(0, (_moveInput.y)/10, 0);
+      }
+
       _rb.linearVelocity = _moveDirection * PlayerData.Instance._playerSpeed;
       
       if (_moveDirection != Vector3.zero)
@@ -63,9 +70,5 @@ public class PlayerMovement : MonoBehaviour
          _animator.SetInteger("Walk", 0);
       }
    }
-
-   private void Animate()
-   {
-     // _animator.SetBool("");
-   }
+   
 }
