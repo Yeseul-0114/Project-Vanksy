@@ -7,28 +7,26 @@ using UnityEngine.UI;
 
 public class ReFillPaint : MonoBehaviour
 {
+    [Header("기본 세팅")]
+    [SerializeField] private ModeController _modeController;
     [SerializeField] private InputActionReference _Click;
+    
+    
+    [Header("페인트 저장소용")]
     [SerializeField] private GameObject[] _storagePopup = new GameObject[2];
     [SerializeField] private Image[] _paintCan = new Image[3];
     private bool _isFill;
-
+    
     private void Update()
     {
-        if (_isFill)
-        {
-            FillPaint();
-        }
+        if (_isFill) FillPaint();
     }
 
-    public void GetPaint() // 이거 페인트 버튼에 실행하게 해야하는데 문제는 그 버튼이 꺼지는 버튼임-> 수정해야함
-    {
-        if (!PlayerData.Instance._isStorage) return;
-        StartCoroutine("getPaint");
-    }
+    private void OnEnable() => _modeController.MoveModeEvent += closePopup;
+    private void OnDisable() => _modeController.MoveModeEvent -= closePopup;
 
-    private IEnumerator getPaint()
+    public void UseingStorage()
     {
-        yield return new WaitForSeconds(1f);
         if (PlayerData.Instance._paintCanCount >= 3)
         {
             _storagePopup[0].SetActive(true);
@@ -44,17 +42,27 @@ public class ReFillPaint : MonoBehaviour
         }
     }
 
+    private void closePopup()
+    {
+        _storagePopup[0].SetActive(false);
+        _storagePopup[1].SetActive(false);
+    }
+
+    //==============================================================
     private void StartFill(InputAction.CallbackContext context)
     {
         Debug.Log("Fill 모드 시작");
         _isFill = true;
     }
 
-    private void FillPaint() // 누르는 동안 페인트 리필
+    private void FillPaint() // 누르는 동안 페인트 리필 -> 속도 조절 + 동시에 차지않고 순서대로 차도록 수정하기
     {
         for (int i = 0; i < 3; i++)
         {
-          
+            if (_paintCan[i].fillAmount < 1)
+            {
+                _paintCan[i].fillAmount += Time.deltaTime;
+            }
         }
     }
 
@@ -62,6 +70,4 @@ public class ReFillPaint : MonoBehaviour
     {
         _isFill = false;
     }
-
-    /// ++ 페인트모드일때 위로 버튼 ㅇ
 }

@@ -8,6 +8,7 @@ public class ModeController : MonoBehaviour
     [Header("모드 버튼")]
     [SerializeField] private GameObject _PaintButton;
     [SerializeField] private GameObject _MoveButton;
+    [SerializeField] private ReFillPaint _fillPaint;
     
     [Header("카메라 세팅")]
     [SerializeField] private GameObject _mainCamMove;
@@ -23,7 +24,7 @@ public class ModeController : MonoBehaviour
     
     private void Awake()
     {
-        CachaComponent();
+        CacheComponent();
     }
 
     public void PaintMode()
@@ -34,7 +35,6 @@ public class ModeController : MonoBehaviour
 
     public void MoveMode()
     {
-        Debug.Log("ModeController : 이동 모드로 들어갑니다.");
         PlayerData.Instance._isPaintMode = false;
         
         _PaintButton.SetActive(true);
@@ -49,13 +49,18 @@ public class ModeController : MonoBehaviour
         _mainCamMove.GetComponent<CameraMove>().enabled = true;
     }
 
-    public IEnumerator ToPaintMode()
+    private IEnumerator ToPaintMode()
     {
         _mainCamMove.GetComponent<CameraMove>().enabled = false;
-        Debug.Log("ModeController : 페인트 모드로 들어갑니다.");
         
         // 페인트 내려놓는 애니메이션 실행
         yield return new WaitForSeconds(1f);
+
+        if (PlayerData.Instance._isStorage)
+        {
+            _fillPaint.UseingStorage();
+        }
+
         PaintModeEvent?.Invoke(); // 페인트 모드 내용 실행
         _neviMap.SetActive(false);
         _PaintButton.SetActive(false);
@@ -71,7 +76,7 @@ public class ModeController : MonoBehaviour
         _cam.fieldOfView += 40;
     }
     
-    private void CachaComponent()
+    private void CacheComponent()
     {
         _cam = Camera.main;
         _mainCamPos = _cam.transform.position;

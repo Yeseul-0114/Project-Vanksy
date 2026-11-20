@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class PaintStorage : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _paintButton;
-
+    [SerializeField] private PaintCan _PaintCan;
+    
     private Outline _Outline;
-
+    private ReFillPaint _reFillPaint;
+    
     private void Awake()
     {
         _Outline = GetComponent<Outline>();
@@ -21,7 +23,7 @@ public class PaintStorage : MonoBehaviour
         {
             PlayerData.Instance._isStorage = true;
             _Outline.enabled = true;
-            _paintButton.text = "Get!";
+            _paintButton.text = "Useing";
         }
     }
 
@@ -31,7 +33,7 @@ public class PaintStorage : MonoBehaviour
         {
             PlayerData.Instance._isStorage = false;
             _Outline.enabled = false;
-           // _storagePopup[0].SetActive(false);
+            _paintButton.text = "Paint";
         }
     }
 
