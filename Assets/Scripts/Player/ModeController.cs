@@ -41,7 +41,7 @@ public class ModeController : MonoBehaviour
         MoveModeEvent?.Invoke(); 
         _PaintButton.SetActive(true);
         _MoveButton.SetActive(false);
-        _neviMap.SetActive(false);
+        _neviMap.SetActive(true);
         PlayerData.Instance._playerSpeed = _keepPlayerSpeed;
         
         // 카메라 시점 원복
@@ -59,7 +59,7 @@ public class ModeController : MonoBehaviour
         // 페인트 내려놓는 애니메이션 실행
         yield return new WaitForSeconds(1f);
         PaintModeEvent?.Invoke(); // 페인트 모드 내용 실행
-        _neviMap.SetActive(true);
+        _neviMap.SetActive(false);
         _PaintButton.SetActive(false);
         _MoveButton.SetActive(true);
         PlayerData.Instance._playerSpeed = 0;
