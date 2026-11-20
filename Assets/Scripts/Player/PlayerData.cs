@@ -6,10 +6,12 @@ public class PlayerData : MonoBehaviour
     
     // true 페인트 모드 , false는 이동모드
     public bool _isPaintMode;
+    public float _playerSpeed;
     
     private void Awake()
     {
         SetSingleton();
+        _playerSpeed = 2f;
         _isPaintMode = false;
     }
 
@@ -24,6 +26,4 @@ public class PlayerData : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-
 }

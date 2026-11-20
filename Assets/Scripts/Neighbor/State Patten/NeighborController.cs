@@ -8,9 +8,8 @@ public class NeighborController : MonoBehaviour, IStateEvent
 {
     [SerializeField] private PosTarget _posTarget;
     [SerializeField] private float _detectRange;
-    [SerializeField] private PlayerMovement _player;
 
-    private float _playerSpeed;
+  //  private float _KeepPlayerSpeed;
     public bool _arrest; // 범인 잡았니
     private Transform _playerTaget; // 범인
     internal bool _playerMarking; // 타겟 감지했음
@@ -36,6 +35,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
     private void Awake()
     {
         CacheComponent();
+        
         _idle = new IdleState(this);
         _walking = new WalkingState(this);
         _tracking = new TrackingState(this);
@@ -43,7 +43,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
     }
     private void CacheComponent()
     {
-        _playerSpeed = _player.moveSpeed;
+      //  _KeepPlayerSpeed = PlayerData.Instance._playerSpeed;
         _neighborAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
@@ -128,7 +128,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
             Debug.Log("범인 놓쳤음!");
             //건물 페인트 초기화
         }
-        _player.moveSpeed = _playerSpeed;
+       // PlayerData.Instance._playerSpeed = _KeepPlayerSpeed;
         _animator.SetBool("isAnger", false);
         _neighborAgent.SetDestination(_lastBildingPos.position);
        // _animator.SetBool("isDone", true);

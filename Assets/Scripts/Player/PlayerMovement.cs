@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
    [SerializeField] protected InputActionReference _MoveInput;
-   public float moveSpeed;
+  // public float moveSpeed;
    
    private Animator _animator;
    private Vector2 _moveInput;
@@ -13,10 +13,10 @@ public class PlayerMovement : MonoBehaviour
    
    private void Awake()
    {
-      CaChaComponet();
+      CaCheComponet();
    }
 
-   private void CaChaComponet()
+   private void CaCheComponet()
    {
       _rb = GetComponent<Rigidbody>();
       _animator = GetComponent<Animator>();
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
    private void Move()
    {
-      _rb.linearVelocity = _moveDirection * moveSpeed;
+      _rb.linearVelocity = _moveDirection * PlayerData.Instance._playerSpeed;
       
       if (_moveDirection != Vector3.zero)
       {
