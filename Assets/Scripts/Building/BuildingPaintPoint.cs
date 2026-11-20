@@ -23,7 +23,7 @@ public class BuildingPaintPoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            GetPixPoint();
+            // GetPixPoint();
         }
     }
 
@@ -52,7 +52,7 @@ public class BuildingPaintPoint : MonoBehaviour
     {
         _mat = GetComponent<MeshRenderer>().material;
         _baseColor = _mat.GetColor("_Color");
-        _texture = _mat.mainTexture as Texture2D;
+        //_texture = _mat.mainTexture as Texture2D;
     }
 
     /*private Color[] Trans()

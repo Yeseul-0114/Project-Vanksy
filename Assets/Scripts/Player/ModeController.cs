@@ -17,7 +17,6 @@ public class ModeController : MonoBehaviour
     private Camera _cam;
     private Vector3 _mainCamPos;
     private Quaternion _mainCamRot;
-    private float _keepPlayerSpeed;
     
     public event Action MoveModeEvent;
     public event Action PaintModeEvent;
@@ -38,11 +37,10 @@ public class ModeController : MonoBehaviour
         Debug.Log("ModeController : 이동 모드로 들어갑니다.");
         PlayerData.Instance._isPaintMode = false;
         
-        MoveModeEvent?.Invoke(); 
         _PaintButton.SetActive(true);
         _MoveButton.SetActive(false);
         _neviMap.SetActive(true);
-        PlayerData.Instance._playerSpeed = _keepPlayerSpeed;
+        MoveModeEvent?.Invoke(); 
         
         // 카메라 시점 원복
         _cam.fieldOfView -= 40;
@@ -62,7 +60,10 @@ public class ModeController : MonoBehaviour
         _neviMap.SetActive(false);
         _PaintButton.SetActive(false);
         _MoveButton.SetActive(true);
-        PlayerData.Instance._playerSpeed = 0;
+        if (!PlayerData.Instance._isStorage)
+        {
+            PlayerData.Instance._playerSpeed = 0;
+        }
         
         // 카메라 시점 페인트모드로 변경
         _cam.transform.position = _paintVeiw.position;
@@ -72,8 +73,6 @@ public class ModeController : MonoBehaviour
     
     private void CachaComponent()
     {
-        _keepPlayerSpeed = PlayerData.Instance._playerSpeed;
-        
         _cam = Camera.main;
         _mainCamPos = _cam.transform.position;
         _mainCamRot = _cam.transform.rotation;

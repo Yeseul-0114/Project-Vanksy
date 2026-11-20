@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
    private void Move()
    {
-      if (PlayerData.Instance._isPaintMode)
+      if (PlayerData.Instance._isPaintMode && !PlayerData.Instance._isStorage)
       {
          _camera.transform.position += new Vector3(0, (_moveInput.y)/10, 0);
       }

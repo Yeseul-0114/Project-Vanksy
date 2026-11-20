@@ -5,25 +5,18 @@ using UnityEngine.UI;
 public class PaintCan: MonoBehaviour
 {
     // 페인트 소비 -> fillAmount 줄어드는 부분 구현하기
-    // 상점에서 페인트 리필하는 것 구현하기
     
     // 기본 1캔만 갖고있기.
     [SerializeField] private Image[] _paintCan = new Image[3];
     [SerializeField] private ModeController _modeController;
-
-    private int _canCount = 3;
     
-    public event Action ChangeCanEvent;
-
     private void OnEnable()
     {
         _modeController.MoveModeEvent += ChackCanCount;
-        ChangeCanEvent += ChangeCan;
     }
     private void OnDisable()
     {
         _modeController.MoveModeEvent -= ChackCanCount;
-        ChangeCanEvent -= ChangeCan;
     }
     private void ChackCanCount() // 이동모드때 검사, 상점에서 구비했을 때 검사.
     {
@@ -35,31 +28,32 @@ public class PaintCan: MonoBehaviour
             }
             else _count++;
         }
-        if (_canCount != _count)
+        
+        PlayerData.Instance._paintCanCount = _count;
+        ChangeCan();
+
+        if (PlayerData.Instance._paintCanCount != _count)
         {
-            ChangeCanEvent?.Invoke();
+            Debug.Log($"PaintCan : 소지 페인트 수 달라졌습니다, 플레이어 속도 바뀝니다.");
         }
-        _canCount = _count;
-        Debug.Log("PaintCan : 소지 페인트 수" + _canCount);
     }
-    private void ChangeCan() // 페인트통 소지수량이 스피드에 미치는 영향.
+    private void ChangeCan()
     {
-        switch (_canCount)
+        switch (PlayerData.Instance._paintCanCount)
         {
             case 0:
-                PlayerData.Instance._playerSpeed += 0.5f;
+                PlayerData.Instance._playerSpeed = 3.5f;
                 break;
             case 1:
+                PlayerData.Instance._playerSpeed = 2f;
                 break;
             case 2:
-                PlayerData.Instance._playerSpeed -= 0.5f;
+                PlayerData.Instance._playerSpeed = 1.5f;
                 break;
             case 3:
-                PlayerData.Instance._playerSpeed -= 1f;
+                PlayerData.Instance._playerSpeed = 1f;
                 break;
         }
-        Debug.Log("PaintCan : 페인트 소지 수량 변동, 플레이어 스피드가 달라집니다.");
+       
     }
-    
-    
 }

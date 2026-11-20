@@ -14,13 +14,17 @@ public class ModeButton : MonoBehaviour
     
     public void PaintMode()
     {
-        if (!_canPaint)
+        if (!_canPaint && !PlayerData.Instance._isStorage)
         {
             Debug.Log("낙서 할 수 있는 벽이 없습니다.");
         }
-        else if (PlayerData.Instance._isDiscover)
+        else if (PlayerData.Instance._isDiscover && !PlayerData.Instance._isStorage)
         {
             Debug.Log("범행을 들킨 상태입니다. 당분간 벽에 낙서 할 수 없습니다.");
+        }
+        else if (PlayerData.Instance._paintCanCount <= 0 && !PlayerData.Instance._isStorage)
+        {
+            Debug.Log("페인트가 없습니다. 창고에서 가져오세요.");
         }
         else
         {

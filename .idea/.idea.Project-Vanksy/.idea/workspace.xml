@@ -12,9 +12,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6379fde1-58b6-4c29-bdd0-9ffb527f6fc2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Met/New Material 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Met/New Material 2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenses/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenses/Ingame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenses/Ingame/NavMesh-ground.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenses/Ingame/NavMesh-ground.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/BuildingPaintPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Building/BuildingPaintPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintCan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintCan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ModeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ModeButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ModeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,61 +48,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0011775467067292" />
-      <entry key="MS500" value="1.2595348176357644" />
-      <entry key="S2" value="1.713754578485043" />
-      <entry key="S5" value="1.8738151353325834" />
-      <entry key="S10" value="1.934780795338179" />
-      <entry key="S30" value="1.9778722558263677" />
-      <entry key="S60" value="2.006034019465839" />
-      <entry key="M2" value="2.4203120483535576" />
-      <entry key="M5" value="10.423475239221133" />
-      <entry key="M10" value="37.70393532287064" />
-      <entry key="M15" value="66.01934153609635" />
-      <entry key="M30" value="137.6601688058133" />
-      <entry key="H1" value="248.91030090900503" />
-      <entry key="H2" value="425.82161087750376" />
-      <entry key="H4" value="726.0324816202552" />
-      <entry key="D1" value="2132.596001098628" />
-      <entry key="W1" value="2918.876232082497" />
+      <entry key="MS100" value="1.0000000000067888" />
+      <entry key="MS500" value="1.0058392548774802" />
+      <entry key="S2" value="1.276432663330067" />
+      <entry key="S5" value="1.5979098983880622" />
+      <entry key="S10" value="1.7732463381684545" />
+      <entry key="S30" value="1.9196935890684728" />
+      <entry key="S60" value="2.032286660134085" />
+      <entry key="M2" value="2.4508355886227458" />
+      <entry key="M5" value="3.620104217906858" />
+      <entry key="M10" value="7.228758311423077" />
+      <entry key="M15" value="14.689578564515168" />
+      <entry key="M30" value="52.673800952653956" />
+      <entry key="H1" value="151.84024612903775" />
+      <entry key="H2" value="354.4490520208399" />
+      <entry key="H4" value="708.3377303475606" />
+      <entry key="D1" value="2356.0513261108695" />
+      <entry key="W1" value="3343.908197964068" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0508586168155574E-6" />
-      <entry key="MS500" value="0.0652657669859269" />
-      <entry key="S2" value="0.7005592667549386" />
-      <entry key="S5" value="1.2826631586983837" />
-      <entry key="S10" value="1.5948130585894438" />
-      <entry key="S30" value="1.852847230523383" />
-      <entry key="S60" value="1.9250597589271647" />
-      <entry key="M2" value="2.0073912188408545" />
-      <entry key="M5" value="3.285556977768601" />
-      <entry key="M10" value="7.207792380387063" />
-      <entry key="M15" value="11.46323151058057" />
-      <entry key="M30" value="24.18198781102183" />
-      <entry key="H1" value="45.74809829067804" />
-      <entry key="H2" value="80.78706115367062" />
-      <entry key="H4" value="144.90277154233414" />
-      <entry key="D1" value="427.0104483396904" />
-      <entry key="W1" value="573.6329921333312" />
+      <entry key="MS100" value="9.928450435195416E-6" />
+      <entry key="MS500" value="0.0999299842693885" />
+      <entry key="S2" value="0.6551622528296389" />
+      <entry key="S5" value="1.2253835135842719" />
+      <entry key="S10" value="1.7249540247466508" />
+      <entry key="S30" value="2.4123279929015347" />
+      <entry key="S60" value="2.6771886978625736" />
+      <entry key="M2" value="2.8306390917050743" />
+      <entry key="M5" value="3.009098293014303" />
+      <entry key="M10" value="3.804135956648468" />
+      <entry key="M15" value="5.288244551718708" />
+      <entry key="M30" value="12.201758710112125" />
+      <entry key="H1" value="30.118710516006942" />
+      <entry key="H2" value="67.92445049015446" />
+      <entry key="H4" value="138.321888568747" />
+      <entry key="D1" value="466.9865177128726" />
+      <entry key="W1" value="653.8479827692278" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9406138499361263" />
-      <entry key="MS500" value="1.2475365852339098" />
-      <entry key="S2" value="2.0645314661055028" />
-      <entry key="S5" value="2.8508747722532486" />
-      <entry key="S10" value="3.3273480892661143" />
-      <entry key="S30" value="3.7489833750180845" />
-      <entry key="S60" value="3.8881505155617893" />
-      <entry key="M2" value="4.404262317175858" />
-      <entry key="M5" value="13.683998274018768" />
-      <entry key="M10" value="44.874288906065225" />
-      <entry key="M15" value="77.43976117223762" />
-      <entry key="M30" value="161.7938306682658" />
-      <entry key="H1" value="294.61035372032273" />
-      <entry key="H2" value="506.565274598544" />
-      <entry key="H4" value="870.89729107492" />
-      <entry key="D1" value="2559.5886107350607" />
-      <entry key="W1" value="3492.5057966123336" />
+      <entry key="MS100" value="0.0011533132979421664" />
+      <entry key="MS500" value="0.2728206925530426" />
+      <entry key="S2" value="1.3273537242625912" />
+      <entry key="S5" value="2.4082505678923045" />
+      <entry key="S10" value="3.2136827475211542" />
+      <entry key="S30" value="4.201212841008819" />
+      <entry key="S60" value="4.636464579764473" />
+      <entry key="M2" value="5.241277850105634" />
+      <entry key="M5" value="6.610379867246196" />
+      <entry key="M10" value="11.018861763029388" />
+      <entry key="M15" value="19.96235610337244" />
+      <entry key="M30" value="64.85338071828602" />
+      <entry key="H1" value="181.92959112296222" />
+      <entry key="H2" value="422.3393996180617" />
+      <entry key="H4" value="846.6246441448029" />
+      <entry key="D1" value="2823.018473253235" />
+      <entry key="W1" value="3997.752295827966" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
