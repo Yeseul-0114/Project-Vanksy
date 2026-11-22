@@ -143,7 +143,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
         yield return new WaitForSeconds(1.5f);
         _paintCan.ChackCanCount();
         _animator.SetBool("isAnger", false);
-        _neighborAgent.SetDestination(_lastBildingPos);
+        _neighborAgent.SetDestination(_lastBildingPos); // 마지막 건물 포지션으로 가기
         
        // _animator.SetBool("isDone", true);
        // StartCoroutine(AngerToReturn());

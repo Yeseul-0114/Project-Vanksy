@@ -32,6 +32,6 @@ public class PlayerData : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
     }
 }
