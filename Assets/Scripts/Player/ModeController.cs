@@ -43,7 +43,7 @@ public class ModeController : MonoBehaviour
         MoveModeEvent?.Invoke(); 
         
         // 카메라 시점 원복
-        _cam.fieldOfView -= 40;
+        _cam.fieldOfView = 32;
         _cam.transform.position = _mainCamPos;
         _cam.transform.rotation = _mainCamRot;
         _mainCamMove.GetComponent<CameraMove>().enabled = true;

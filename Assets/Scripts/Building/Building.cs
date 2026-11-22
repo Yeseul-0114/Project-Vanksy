@@ -1,15 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Building : MonoBehaviour
 {
     [SerializeField] public ModeController _modeController;
     [SerializeField] public ModeButton _playermode;
+    [SerializeField] public Image _minimap;
     [SerializeField] public bool _isClear; // 페인트완료 되면 여기 바꿔줘야함. 
     private Outline _outLine;
     private Painting _painting;
     private MeshRenderer _meshRenderer;
-
+    private Building _building;
     public event Action OnClearEvent;
     
     private void Awake()
@@ -20,10 +22,10 @@ public class Building : MonoBehaviour
 
     private void CachaComponent()
     {
+        _building = GetComponent<Building>();
         _painting = GetComponent<Painting>();
         _meshRenderer = GetComponent<MeshRenderer>();
         _outLine = GetComponent<Outline>();
-        _isClear = false;
         _outLine.enabled = false;
     }
     
@@ -41,7 +43,12 @@ public class Building : MonoBehaviour
     private void OnPaint()
     {
         _painting.enabled = true;
-        PlayerData.Instance._currentBuildingMR = _meshRenderer;
+        _minimap.color = Color.darkSalmon;
+        if (!PlayerData.Instance._isStorage)
+        {
+            PlayerData.Instance._lastBuildingMR = _meshRenderer;
+            PlayerData.Instance._lastBilding = _building;
+        }
     }
 
     private void OnTriggerExit(Collider other) // 벽 칠하지 않고 지나쳤을 때

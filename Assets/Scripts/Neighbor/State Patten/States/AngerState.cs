@@ -10,7 +10,6 @@ public class AngerState : StateBase
     {
         _neiController._neighborAgent.ResetPath();
         Debug.Log("AngerState : 주민은 분노합니다.");
-        _neiController._animator.SetBool("isAnger", true);
         _neiController.StartCoroutine(_neiController.AfterAnger());
     }
 
@@ -18,6 +17,8 @@ public class AngerState : StateBase
     {
         if (_neiController.IsArrived()) // 마지막 범행현장 도착 했다면
         {
+            Debug.Log("건물 청소 중");
+            _neiController._neighborAgent.stoppingDistance = 0.6f;
             _neiController.StartCoroutine(_neiController.AngerToReturn());
         }
     }

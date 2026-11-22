@@ -11,11 +11,12 @@ public class NeighborController : MonoBehaviour, IStateEvent
     [SerializeField] private PosTarget _posTarget;
     [SerializeField] private Image[] _paintCanImages;
     [SerializeField] private Image _miniMap;
+    [SerializeField] private Material _resetMR;
     
    // public bool _arrest; // 범인 잡았니
     private GameObject _Taget; // 범인
     internal bool _playerMarking; // 타겟 감지했음
-    internal Vector3 _lastBildingPos; // 범행현장
+    // internal Vector3 _lastBildingPos; // 범행현장
     private float _catchRange = 0.7f; // 잠기 판정범위
     private float _detectRange = 3f; // 추격 판정 범위
 
@@ -86,13 +87,13 @@ public class NeighborController : MonoBehaviour, IStateEvent
         // 주민이고, 페인트 모드라면.
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && PlayerData.Instance._isPaintMode)
         {
-            _neighborAgent.speed += 0.2f;
+            _playerMarking = true;
             Debug.Log($"{gameObject.name}가 범인을 발견했습니다.");
+            _neighborAgent.speed += 0.2f;
             _miniMap.color = Color.red;
          
-            _lastBildingPos = other.transform.position;
-            Debug.Log("마지막 빌딩 포지션" + _lastBildingPos);
-            _playerMarking = true;
+            /*_lastBildingPos = other.transform.position;
+            Debug.Log("마지막 빌딩 포지션" + _lastBildingPos);*/
             _Taget = other.gameObject;
         }
     }
@@ -134,13 +135,12 @@ public class NeighborController : MonoBehaviour, IStateEvent
                 if (_paintCanImages[i].fillAmount >= 1) // 꽉찬게 있다면.
                 {
                     _paintCanImages[i].fillAmount = 0;
-                    Debug.Log("페인트 압수함.");
                     break;
                 }
                 else if (_paintCanImages[0] && _paintCanImages[0].fillAmount <= 1)
                 {
                     _paintCanImages[0].fillAmount = 0;
-                    Debug.Log("페인트 압수함.");
+                    break;
                 }
             }
             SetState(_anger);
@@ -150,24 +150,28 @@ public class NeighborController : MonoBehaviour, IStateEvent
     //==================================================
     public IEnumerator AfterAnger()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         if (PlayerData.Instance._arrest)
         {
             PlayerData.Instance._arrest = false;
-            _paintCan.ChackCanCount();
+            _paintCan.ChackCanCount(); // 여기서 플레이어 다시 움직임 가능
         }
-        _animator.SetBool("isAnger", false); // 다시 걷기 애니메이션
-        _neighborAgent.SetDestination(_lastBildingPos); // 마지막 건물 포지션으로 가기
+        
+        _neighborAgent.stoppingDistance = 0.2f;
+        _neighborAgent.SetDestination(PlayerData.Instance._lastBuildingMR.transform.position);
+       // _neighborAgent.SetDestination(_lastBildingPos); // 마지막 건물 포지션으로 가기
         PlayerData.Instance._isDiscover =  false; // 혐의 풀림
     }
 
     public IEnumerator AngerToReturn()
     {
-        //  _animator.SetBool("isDone", true); // 벽 문지르는 애니메이션
-        
         // 마지막 건물 리셋시키기
+        PlayerData.Instance._lastBuildingMR.material = _resetMR;
+        PlayerData.Instance._lastBilding._isClear = false;
+        PlayerData.Instance._lastBilding._minimap.color = Color.darkGray;
+        
         yield return new WaitForSeconds(2f);
-      //  _miniMap.color = _keepColor;
+        _miniMap.color = _keepColor;
         SetState(Walking);
     }
 }

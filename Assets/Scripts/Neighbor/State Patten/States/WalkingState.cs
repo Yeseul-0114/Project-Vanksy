@@ -10,7 +10,6 @@ public class WalkingState : StateBase
     public override void Enter()
     {
        // Debug.Log("WalkingState : 순찰하는 중...");
-        _neiController._animator.SetBool("isGole", false); // 걷기 애니메이션
     }
 
     public override void Update()

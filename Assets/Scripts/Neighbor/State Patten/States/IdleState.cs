@@ -9,7 +9,6 @@ public class IdleState : StateBase
     public override void Enter()
     {
        // Debug.Log("idleState : 주민은 낙서로 골치아픕니다..");
-        _neiController._animator.SetBool("isGole", true);
     }
 
     public override void Update()

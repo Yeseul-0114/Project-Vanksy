@@ -124,7 +124,7 @@ public class Painting : MonoBehaviour
             {
                 for (int j = 0; j < _resolution; j++)
                 {
-                    _brushTexture.SetPixel(i, j, Color.softYellow);
+                    _brushTexture.SetPixel(i, j, Color. violetRed);
                 }
             }
             _brushTexture.Apply();

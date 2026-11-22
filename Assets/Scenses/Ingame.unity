@@ -287,6 +287,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
     - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 958339794}
+    - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -419,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 474148918}
     - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
       propertyPath: _playermode
       value: 
@@ -1979,6 +1987,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1070288214}
+    - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 0}
@@ -2400,6 +2412,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 602484445}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &438589107
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2411,10 +2424,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 3
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2561,6 +2574,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
     - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1456346690}
+    - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 0}
@@ -2645,6 +2662,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 61990153}
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
@@ -3880,6 +3901,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 1928043491}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &551656343
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3891,10 +3913,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 2
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -4510,6 +4532,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 1829448830}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &672418326
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4521,10 +4544,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 6
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -4573,6 +4596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 76303330}
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
@@ -4785,6 +4812,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1377788733}
     - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
       propertyPath: _playermode
       value: 
@@ -5894,6 +5925,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1342458643}
+    - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 0}
@@ -5979,6 +6014,10 @@ PrefabInstance:
       propertyPath: _data
       value: 
       objectReference: {fileID: 1432671835}
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 918438051}
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
@@ -6795,6 +6834,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 245731469}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &882568428
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6806,10 +6846,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 7
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -11754,6 +11794,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 1091152493}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &1382707013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11765,10 +11806,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 0
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -12135,6 +12176,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 911119168}
+    - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 0}
@@ -12254,7 +12299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   _isPaintMode: 0
   _playerSpeed: 0
-  _currentBuildingMR: {fileID: 0}
+  _lastBuildingMR: {fileID: 0}
+  _lastBilding: {fileID: 0}
   _isDiscover: 0
   _arrest: 0
   _paintCanCount: 1
@@ -12420,6 +12466,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1058452178}
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -12457,7 +12507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002545118941075221, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 9002545118941075221, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12686,6 +12736,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 693312119}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &1490363967
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12697,10 +12748,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 5
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -13770,6 +13821,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 1256612964}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &1617905471
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13781,10 +13833,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 1
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -13907,6 +13959,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1356194101}
     - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
       propertyPath: _playermode
       value: 
@@ -14625,6 +14681,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1212884853}
+    - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -15126,6 +15186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 992164956}
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
@@ -16030,6 +16094,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1277128842}
+    - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -16185,6 +16253,7 @@ MonoBehaviour:
   - {fileID: 68142711}
   - {fileID: 667863057}
   _miniMap: {fileID: 504782285}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
 --- !u!195 &1991352926
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16196,10 +16265,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 0.1
+  m_Acceleration: 0.3
   avoidancePriority: 4
-  m_AngularSpeed: 3
-  m_StoppingDistance: 0.3
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -16491,6 +16560,10 @@ PrefabInstance:
       propertyPath: _isClear
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1528259657}
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
@@ -17185,6 +17258,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
     - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1527939319}
+    - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -17372,6 +17449,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
     - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1763253511}
+    - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 1575805858}
@@ -17482,6 +17563,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
     - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 2121732755}
+    - target: {fileID: 355175523012642660, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -17571,6 +17656,10 @@ PrefabInstance:
       value: Tree1
       objectReference: {fileID: 0}
     - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1268307383}
+    - target: {fileID: 2745187132865690288, guid: b89de03f7586876429e87e9fb1b8a720, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -17647,6 +17736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 432297748}
     - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
       propertyPath: _playermode
       value: 
@@ -17777,6 +17870,10 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 1872612631}
+    - target: {fileID: 803297983351880208, guid: 5645de2902028fa43bca7d43b8678cd4, type: 3}
       propertyPath: _playermode
       value: 
       objectReference: {fileID: 434151838}
@@ -17832,6 +17929,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 538881809}
     - target: {fileID: 1569012089774408658, guid: 576297525e5fe0547908343186a50f3f, type: 3}
       propertyPath: _playermode
       value: 
@@ -17917,6 +18018,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1513344256}
     m_Modifications:
+    - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
+      propertyPath: _minimap
+      value: 
+      objectReference: {fileID: 199456702}
     - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
       propertyPath: _playermode
       value: 
