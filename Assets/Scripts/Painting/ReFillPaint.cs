@@ -59,7 +59,7 @@ public class ReFillPaint : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            if (_paintCan[i].fillAmount < 1)
+            if (_paintCan[i].fillAmount < 1 && _paintCan[i-1].fillAmount >=1)
             {
                 _paintCan[i].fillAmount += Time.deltaTime;
             }
