@@ -130,6 +130,7 @@ public class PaintJudge : MonoBehaviour
 
         _building._isClear = true;
         _building._minimap.color = Color.darkGreen;
+        PlayerData.Instance._clearBildings++;
         OnPaintClear?.Invoke();
     }
 #endregion

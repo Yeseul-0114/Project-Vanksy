@@ -11,9 +11,19 @@ public class PlayerData : MonoBehaviour
     public Building _lastBilding;
     public bool _isDiscover; // 들킨 상태인가? _ 이때는 페인트모드 할 수 없음.
     public bool _arrest; // 잡혔는가?_ 이때는 움직일 수 없음.
+    public bool _canFill = true;
+    
     
     public int _paintCanCount = 1;
     public bool _isStorage;
+    //--------------------------------------------------
+
+    public int _catchCount = 0;
+    public int _clearBildings = 0;
+    public int _UseingStorage = 0;
+    
+    
+    //--------------------------------------------------
     
     private void Awake()
     {

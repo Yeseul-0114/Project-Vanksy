@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PaintCan: MonoBehaviour
+public class PaintTin: MonoBehaviour
 {
     // 페인트 소비 -> fillAmount 줄어드는 부분 구현하기
     
@@ -44,11 +44,13 @@ public class PaintCan: MonoBehaviour
                 PlayerData.Instance._playerSpeed = 1f;
                 break;
         }
-
         if (PlayerData.Instance._paintCanCount != _count)
         {
             Debug.Log($"PaintCan : 소지 페인트 수 달라졌습니다, 플레이어 속도 바뀝니다.");
         }
         PlayerData.Instance._paintCanCount = _count;
+        
+        if (_paintCan[0].fillAmount < 1 ) PlayerData.Instance._canFill = true;
+        if (_paintCan[2].fillAmount >= 1)  PlayerData.Instance._canFill = false;
     }
 }

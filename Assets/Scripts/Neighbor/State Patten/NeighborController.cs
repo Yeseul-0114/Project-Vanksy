@@ -19,8 +19,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
     internal bool _playerMarking; // 타겟 감지했음
     // internal Vector3 _lastBildingPos; // 범행현장
     private float _detectRange = 3f; // 추격 판정 범위
-
-    private Color _keepColor;
+    
     internal NavMeshAgent _neighborAgent;
     internal Vector3 _targetDirection; // 목적지 좌표. 
     internal Animator _animator;
@@ -49,7 +48,6 @@ public class NeighborController : MonoBehaviour, IStateEvent
     }
     private void CacheComponent()
     {
-        _keepColor = _miniMap.color;
         _neighborAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
     }
@@ -91,9 +89,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
             Debug.Log($"{gameObject.name}가 범인을 발견했습니다.");
             _neighborAgent.speed += 0.2f;
             _miniMap.color = Color.red;
-         
-            /*_lastBildingPos = other.transform.position;
-            Debug.Log("마지막 빌딩 포지션" + _lastBildingPos);*/
+            
             _Taget = other.gameObject;
         }
     }
@@ -168,11 +164,15 @@ public class NeighborController : MonoBehaviour, IStateEvent
     {
         // 마지막 건물 리셋시키기
         PlayerData.Instance._lastBuildingMR.material = _resetMR;
-        PlayerData.Instance._lastBilding._isClear = false;
+        if (PlayerData.Instance._lastBilding._isClear)
+        {
+            PlayerData.Instance._lastBilding._isClear = false;
+            PlayerData.Instance._clearBildings--;
+        }
+        
         PlayerData.Instance._lastBilding._minimap.color = Color.darkGray;
         
         yield return new WaitForSeconds(2f);
-        _miniMap.color = _keepColor;
         SetState(Walking);
     }
 }

@@ -9,6 +9,7 @@ public class ModeController : MonoBehaviour
     [SerializeField] private GameObject _PaintButton;
     [SerializeField] private GameObject _MoveButton;
     [SerializeField] private ReFillPaint _fillPaint;
+    [SerializeField] private Animator _animation;
     
     [Header("카메라 세팅")]
     [SerializeField] private GameObject _mainCamMove;
@@ -18,6 +19,7 @@ public class ModeController : MonoBehaviour
     private Camera _cam;
     private Vector3 _mainCamPos;
     private Quaternion _mainCamRot;
+    
     
     public event Action MoveModeEvent;
     public event Action PaintModeEvent;
@@ -52,8 +54,7 @@ public class ModeController : MonoBehaviour
     private IEnumerator ToPaintMode()
     {
         _mainCamMove.GetComponent<CameraMove>().enabled = false;
-        
-        // 페인트 내려놓는 애니메이션 실행
+        _animation.SetTrigger("isPick");
         yield return new WaitForSeconds(1f);
 
         if (PlayerData.Instance._isStorage)

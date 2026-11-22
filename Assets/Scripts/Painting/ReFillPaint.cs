@@ -17,6 +17,7 @@ public class ReFillPaint : MonoBehaviour
     [SerializeField] private Image[] _paintCan = new Image[3];
     private bool _isFill;
     
+    
     private void Update()
     {
         if (_isFill) FillPaint();
@@ -27,15 +28,16 @@ public class ReFillPaint : MonoBehaviour
 
     public void UseingStorage()
     {
-        if (PlayerData.Instance._paintCanCount >= 3)
+        if (!PlayerData.Instance._canFill)
         {
             _storagePopup[0].SetActive(true);
             Debug.Log("페인트를 더 들고다닐 손이 없을텐데요. 부지런히 칠하세요!");
         }
         else
         {
-            _storagePopup[1].SetActive(true); // 여기에 아예 채우기 버튼을 넣자. 
+            _storagePopup[1].SetActive(true);
             
+            PlayerData.Instance._UseingStorage++;
             _Click.action.Enable();
             _Click.action.performed += StartFill;
             _Click.action.canceled += StopFill;
@@ -57,11 +59,18 @@ public class ReFillPaint : MonoBehaviour
 
     private void FillPaint() // 누르는 동안 페인트 리필 -> 속도 조절 + 동시에 차지않고 순서대로 차도록 수정하기
     {
-        for (int i = 0; i < 3; i++)
+        if (_paintCan[0].fillAmount < 1)
         {
-            if (_paintCan[i].fillAmount < 1 && _paintCan[i-1].fillAmount >=1)
+            _paintCan[0].fillAmount += Time.deltaTime/3;
+        }
+        else
+        {
+            for (int i = 1; i < 3; i++)
             {
-                _paintCan[i].fillAmount += Time.deltaTime/3;
+                if (_paintCan[i].fillAmount < 1 && _paintCan[i-1].fillAmount >=1)
+                {
+                    _paintCan[i].fillAmount += Time.deltaTime/3;
+                }
             }
         }
     }

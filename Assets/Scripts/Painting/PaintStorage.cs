@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PaintStorage : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _paintButton;
-    [SerializeField] private PaintCan _PaintCan;
+    [SerializeField] private PaintTin _PaintCan;
     
     private Outline _Outline;
     private ReFillPaint _reFillPaint;
