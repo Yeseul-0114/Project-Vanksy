@@ -261,9 +261,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 32c365fa023edde408a8354b9ae78a2e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 546507102}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 32c365fa023edde408a8354b9ae78a2e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 443416329}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 32c365fa023edde408a8354b9ae78a2e, type: 3}
       insertIndex: -1
@@ -990,7 +987,6 @@ GameObject:
   - component: {fileID: 136681951}
   - component: {fileID: 136681950}
   - component: {fileID: 136681949}
-  - component: {fileID: 136681948}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -1018,18 +1014,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &136681948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136681946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &136681949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,68 +1146,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a6cef862ce2cb4a88c5ca5d5af5d2b, type: 3}
---- !u!1001 &158038765
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 438589103}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &158038766 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 158038765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &189850204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,7 +1158,6 @@ GameObject:
   - component: {fileID: 189850209}
   - component: {fileID: 189850208}
   - component: {fileID: 189850207}
-  - component: {fileID: 189850206}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -1264,18 +1185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &189850206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189850204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &189850207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1824,7 +1733,6 @@ GameObject:
   - component: {fileID: 307760732}
   - component: {fileID: 307760731}
   - component: {fileID: 307760730}
-  - component: {fileID: 307760729}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -1852,18 +1760,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &307760729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307760727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &307760730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2497,9 +2393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 602484445}
 --- !u!195 &438589107
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2511,10 +2411,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 3
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2555,68 +2455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73254281a27dd40488106db1bc54d887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StateMuchin
---- !u!1001 &443416328
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 551656338}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &443416329 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 443416328}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &463710377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2896,7 +2734,6 @@ GameObject:
   - component: {fileID: 467212198}
   - component: {fileID: 467212197}
   - component: {fileID: 467212196}
-  - component: {fileID: 467212195}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -2924,18 +2761,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &467212195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467212193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &467212196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3410,7 +3235,6 @@ GameObject:
   - component: {fileID: 527266038}
   - component: {fileID: 527266037}
   - component: {fileID: 527266036}
-  - component: {fileID: 527266035}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -3438,18 +3262,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &527266035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527266033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &527266036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3591,7 +3403,6 @@ GameObject:
   - component: {fileID: 534850887}
   - component: {fileID: 534850886}
   - component: {fileID: 534850885}
-  - component: {fileID: 534850884}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -3619,18 +3430,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &534850884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534850882}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &534850885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3911,9 +3710,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4675a6d24529a1a479df31aadb0eb163, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1581215209}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4675a6d24529a1a479df31aadb0eb163, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 158038766}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4675a6d24529a1a479df31aadb0eb163, type: 3}
       insertIndex: -1
@@ -3943,7 +3739,6 @@ GameObject:
   - component: {fileID: 546507106}
   - component: {fileID: 546507105}
   - component: {fileID: 546507104}
-  - component: {fileID: 546507103}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -3971,18 +3766,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &546507103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546507101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &546507104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4090,9 +3873,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1928043491}
 --- !u!195 &551656343
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4104,10 +3891,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 2
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -4716,9 +4503,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1829448830}
 --- !u!195 &672418326
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4730,10 +4521,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 6
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -5196,68 +4987,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693312117}
   m_CullTransparentMesh: 1
---- !u!1001 &701183190
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1617905466}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &701183191 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 701183190}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &709553202
 GameObject:
   m_ObjectHideFlags: 0
@@ -5270,7 +4999,6 @@ GameObject:
   - component: {fileID: 709553207}
   - component: {fileID: 709553206}
   - component: {fileID: 709553205}
-  - component: {fileID: 709553204}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -5298,18 +5026,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &709553204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709553202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &709553205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5522,7 +5238,6 @@ GameObject:
   - component: {fileID: 728625185}
   - component: {fileID: 728625184}
   - component: {fileID: 728625183}
-  - component: {fileID: 728625182}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -5550,18 +5265,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &728625182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 728625180}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &728625183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5790,7 +5493,6 @@ GameObject:
   - component: {fileID: 751442959}
   - component: {fileID: 751442958}
   - component: {fileID: 751442957}
-  - component: {fileID: 751442956}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -5818,18 +5520,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &751442956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751442954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &751442957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6378,7 +6068,6 @@ GameObject:
   - component: {fileID: 811765905}
   - component: {fileID: 811765904}
   - component: {fileID: 811765903}
-  - component: {fileID: 811765902}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -6406,18 +6095,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &811765902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811765900}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &811765903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6569,7 +6246,6 @@ GameObject:
   - component: {fileID: 836131225}
   - component: {fileID: 836131224}
   - component: {fileID: 836131223}
-  - component: {fileID: 836131222}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -6597,18 +6273,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &836131222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836131220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &836131223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6684,7 +6348,6 @@ GameObject:
   - component: {fileID: 841940066}
   - component: {fileID: 841940065}
   - component: {fileID: 841940064}
-  - component: {fileID: 841940063}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -6712,18 +6375,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &841940063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841940061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &841940064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6799,7 +6450,6 @@ GameObject:
   - component: {fileID: 852991987}
   - component: {fileID: 852991986}
   - component: {fileID: 852991985}
-  - component: {fileID: 852991984}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -6827,18 +6477,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &852991984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852991982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &852991985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6914,7 +6552,6 @@ GameObject:
   - component: {fileID: 853489776}
   - component: {fileID: 853489775}
   - component: {fileID: 853489774}
-  - component: {fileID: 853489773}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -6942,18 +6579,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.515, y: 0.59}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &853489773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853489771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &853489774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7029,7 +6654,6 @@ GameObject:
   - component: {fileID: 856312989}
   - component: {fileID: 856312988}
   - component: {fileID: 856312987}
-  - component: {fileID: 856312986}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -7057,18 +6681,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &856312986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856312984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &856312987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7176,9 +6788,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 245731469}
 --- !u!195 &882568428
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7190,10 +6806,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 7
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -7383,7 +6999,6 @@ GameObject:
   - component: {fileID: 912293721}
   - component: {fileID: 912293720}
   - component: {fileID: 912293719}
-  - component: {fileID: 912293718}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -7411,18 +7026,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &912293718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912293716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &912293719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7676,7 +7279,6 @@ GameObject:
   - component: {fileID: 936035885}
   - component: {fileID: 936035884}
   - component: {fileID: 936035883}
-  - component: {fileID: 936035882}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -7704,18 +7306,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &936035882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936035880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &936035883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8184,7 +7774,6 @@ GameObject:
   - component: {fileID: 977154988}
   - component: {fileID: 977154987}
   - component: {fileID: 977154986}
-  - component: {fileID: 977154985}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -8212,18 +7801,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &977154985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977154983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &977154986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8374,7 +7951,6 @@ GameObject:
   - component: {fileID: 1009433437}
   - component: {fileID: 1009433436}
   - component: {fileID: 1009433435}
-  - component: {fileID: 1009433434}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -8402,18 +7978,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1009433434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009433432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1009433435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9203,9 +8767,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 89a2d5c2d1ed2f144a2928ca27a9cfa5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1863516412}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 89a2d5c2d1ed2f144a2928ca27a9cfa5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 701183191}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 89a2d5c2d1ed2f144a2928ca27a9cfa5, type: 3}
       insertIndex: -1
@@ -9697,7 +9258,6 @@ GameObject:
   - component: {fileID: 1111076367}
   - component: {fileID: 1111076366}
   - component: {fileID: 1111076365}
-  - component: {fileID: 1111076364}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -9725,18 +9285,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1111076364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111076362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1111076365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9985,9 +9533,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2087beb9f1a3f5d49b6f5738991fe20e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 307760728}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2087beb9f1a3f5d49b6f5738991fe20e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2095167119}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2087beb9f1a3f5d49b6f5738991fe20e, type: 3}
       insertIndex: -1
@@ -10434,7 +9979,6 @@ GameObject:
   - component: {fileID: 1192069523}
   - component: {fileID: 1192069522}
   - component: {fileID: 1192069521}
-  - component: {fileID: 1192069520}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -10462,18 +10006,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1192069520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192069518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1192069521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10712,6 +10244,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e538e8cd2b24c041a58c849cbbeb528, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7e538e8cd2b24c041a58c849cbbeb528, type: 3}
       propertyPath: m_TagString
       value: Nei
       objectReference: {fileID: 0}
@@ -10741,9 +10277,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e538e8cd2b24c041a58c849cbbeb528, type: 3}
       insertIndex: -1
       addedObject: {fileID: 836131221}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e538e8cd2b24c041a58c849cbbeb528, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8369130067522534752}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e538e8cd2b24c041a58c849cbbeb528, type: 3}
       insertIndex: -1
@@ -11351,9 +10884,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f8a4a6887ffbfb47907aae097e1a4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2036898551}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f8a4a6887ffbfb47907aae097e1a4ba, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1486137870}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9f8a4a6887ffbfb47907aae097e1a4ba, type: 3}
       insertIndex: -1
@@ -11721,7 +11251,6 @@ GameObject:
   - component: {fileID: 1298516783}
   - component: {fileID: 1298516782}
   - component: {fileID: 1298516781}
-  - component: {fileID: 1298516780}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -11749,18 +11278,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1298516780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298516778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1298516781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12230,9 +11747,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1091152493}
 --- !u!195 &1382707013
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12244,10 +11765,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 0
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -12713,7 +12234,7 @@ Transform:
   m_GameObject: {fileID: 1432671833}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.3605735, y: 0, z: 0.26891756}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12735,6 +12256,7 @@ MonoBehaviour:
   _playerSpeed: 0
   _currentBuildingMR: {fileID: 0}
   _isDiscover: 0
+  _arrest: 0
   _paintCanCount: 1
   _isStorage: 0
 --- !u!1 &1450371087
@@ -13113,68 +12635,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62724a8cd2495b14f930b7129c3bc47b, type: 3}
---- !u!1001 &1486137869
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1382707008}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &1486137870 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 1486137869}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490363961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a204275ba4e3e024e8aae23d8111960c, type: 3}
@@ -13219,9 +12679,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 693312119}
 --- !u!195 &1490363967
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13233,10 +12697,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 5
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -14053,7 +13517,6 @@ GameObject:
   - component: {fileID: 1581215213}
   - component: {fileID: 1581215212}
   - component: {fileID: 1581215211}
-  - component: {fileID: 1581215210}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -14081,18 +13544,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1581215210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581215208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1581215211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14173,7 +13624,6 @@ GameObject:
   - component: {fileID: 1604832602}
   - component: {fileID: 1604832601}
   - component: {fileID: 1604832600}
-  - component: {fileID: 1604832599}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -14201,18 +13651,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1604832599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604832597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1604832600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14325,9 +13763,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1256612964}
 --- !u!195 &1617905471
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14339,10 +13781,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 1
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -14552,7 +13994,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4e3e7712e20550c418f6d9f9233609f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e3e7712e20550c418f6d9f9233609f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14560,7 +14002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e3e7712e20550c418f6d9f9233609f9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e3e7712e20550c418f6d9f9233609f9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14679,7 +14121,6 @@ GameObject:
   - component: {fileID: 1667320087}
   - component: {fileID: 1667320086}
   - component: {fileID: 1667320085}
-  - component: {fileID: 1667320084}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -14707,18 +14148,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1667320084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667320082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1667320085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14906,7 +14335,6 @@ GameObject:
   - component: {fileID: 1704420170}
   - component: {fileID: 1704420169}
   - component: {fileID: 1704420168}
-  - component: {fileID: 1704420167}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -14934,18 +14362,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1704420167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704420165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1704420168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15612,7 +15028,6 @@ GameObject:
   - component: {fileID: 1863516416}
   - component: {fileID: 1863516415}
   - component: {fileID: 1863516414}
-  - component: {fileID: 1863516413}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -15640,18 +15055,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1863516413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863516411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1863516414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16035,7 +15438,6 @@ GameObject:
   - component: {fileID: 1927772416}
   - component: {fileID: 1927772415}
   - component: {fileID: 1927772414}
-  - component: {fileID: 1927772413}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -16063,18 +15465,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1927772413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927772411}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &1927772414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16367,9 +15757,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 697e1609efeb18e44a75c829ffb575e7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 189850205}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 697e1609efeb18e44a75c829ffb575e7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3990404145431635525}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 697e1609efeb18e44a75c829ffb575e7, type: 3}
       insertIndex: -1
@@ -16791,9 +16178,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _detectRange: 6
-  _arrest: 0
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 504782285}
 --- !u!195 &1991352926
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16805,10 +16196,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.25
   m_Speed: 1
-  m_Acceleration: 8
+  m_Acceleration: 0.1
   avoidancePriority: 4
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_AngularSpeed: 3
+  m_StoppingDistance: 0.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -16923,7 +16314,6 @@ GameObject:
   - component: {fileID: 2036898555}
   - component: {fileID: 2036898554}
   - component: {fileID: 2036898553}
-  - component: {fileID: 2036898552}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -16951,18 +16341,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2036898552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036898550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &2036898553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17265,68 +16643,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085607123}
   m_CullTransparentMesh: 1
---- !u!1001 &2095167118
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1991352922}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &2095167119 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 2095167118}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2110591400
 GameObject:
   m_ObjectHideFlags: 0
@@ -17339,7 +16655,6 @@ GameObject:
   - component: {fileID: 2110591405}
   - component: {fileID: 2110591404}
   - component: {fileID: 2110591403}
-  - component: {fileID: 2110591402}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -17367,18 +16682,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2110591402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110591400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &2110591403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17584,9 +16887,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a204275ba4e3e024e8aae23d8111960c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 709553203}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a204275ba4e3e024e8aae23d8111960c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1829835369068505536}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a204275ba4e3e024e8aae23d8111960c, type: 3}
       insertIndex: -1
@@ -17973,7 +17273,6 @@ GameObject:
   - component: {fileID: 2145882940}
   - component: {fileID: 2145882939}
   - component: {fileID: 2145882938}
-  - component: {fileID: 2145882937}
   m_Layer: 6
   m_Name: '[Canvas] MiniMap'
   m_TagString: Untagged
@@ -18001,18 +17300,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2145882937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145882935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0277376e34d92f8448158fd0f2dfd6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MiniMapUI
 --- !u!114 &2145882938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18076,68 +17363,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
---- !u!1001 &1829835369068505535
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1490363962}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &1829835369068505536 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 1829835369068505535}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3436957968507185700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18333,68 +17558,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9002545118941075221, guid: a716e3092298e004194dbf4f0ffc7491, type: 3}
   m_PrefabInstance: {fileID: 3560731292934149366}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3990404145431635524
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 672418321}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &3990404145431635525 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 3990404145431635524}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7366507568421422436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18491,7 +17654,7 @@ PrefabInstance:
     - target: {fileID: 62946947562044991, guid: 385e25443c273bd49a5272e347d44017, type: 3}
       propertyPath: _modeController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2140081477}
     - target: {fileID: 1782431005414551776, guid: 385e25443c273bd49a5272e347d44017, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -18556,68 +17719,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8928796178553856846, guid: 385e25443c273bd49a5272e347d44017, type: 3}
   m_PrefabInstance: {fileID: 8200658900257798115}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8369130067522534751
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 882568423}
-    m_Modifications:
-    - target: {fileID: 2275016328603491660, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_Name
-      value: Neicollider
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
---- !u!4 &8369130067522534752 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4620058889482379277, guid: d7ba36ca22f46ff4394e9ad22453c8c8, type: 3}
-  m_PrefabInstance: {fileID: 8369130067522534751}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8378528406505821320
 PrefabInstance:

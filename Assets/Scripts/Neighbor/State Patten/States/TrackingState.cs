@@ -22,8 +22,5 @@ public class TrackingState : StateBase
 
     public override void Exit()
     {
-      
     }
-    
-    
 }

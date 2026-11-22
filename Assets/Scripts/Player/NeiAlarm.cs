@@ -15,26 +15,25 @@ public class NeiAlarm : MonoBehaviour
         {
             _direction = other.transform.position;
             Vector3 _playerDirection = gameObject.transform.position;
-
-            // 좌우 비교 x , 위 아래 비교 y
+            
             if (_playerDirection.x > _direction.x && _playerDirection.y < _direction.y)
             {
-                Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 왼쪽 + 위");
+               // Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 왼쪽 + 위");
                 StartCoroutine(OffAlram(0));
             }
             else if (_playerDirection.x > _direction.x && _playerDirection.y > _direction.y)
             {
-                Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 왼쪽 + 아래");
+               // Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 왼쪽 + 아래");
                 StartCoroutine(OffAlram(2));
             }
             else if (_playerDirection.x < _direction.x &&  _playerDirection.y < _direction.y)
             {
-                Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 오른쪽 + 위");
+               // Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 오른쪽 + 위");
                 StartCoroutine(OffAlram(1));
             }
             else if (_playerDirection.x < _direction.x && _playerDirection.y > _direction.y)
             {
-                Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 오른쪽 + 아래");
+               // Debug.Log($"NeiAlarm : 경고. 주민이 가까이 있습니다. 방향 : 오른쪽 + 아래");
                 StartCoroutine(OffAlram(3));
             }
             else return;

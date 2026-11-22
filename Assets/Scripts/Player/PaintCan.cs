@@ -20,27 +20,16 @@ public class PaintCan: MonoBehaviour
     }
     public void ChackCanCount() // 이동모드때 검사, 상점에서 구비했을 때 검사.
     {
-        Debug.Log("PaintCan : 남은 페인트통 검사 시작 ");
+        if (PlayerData.Instance._arrest) return;
+        
         int _count = 0;
         for (int i = 0; i < _paintCan.Length; i++)
         {
-            if (_paintCan[i].fillAmount <= 0)
-            {
-                Debug.Log("빈 캔");
-            }
-            else _count++;
+            if (_paintCan[i].fillAmount > 0) _count++;
         }
-        PlayerData.Instance._paintCanCount = _count;
-        ChangeToSpeed();
-
-        if (PlayerData.Instance._paintCanCount != _count)
-        {
-            Debug.Log($"PaintCan : 소지 페인트 수 달라졌습니다, 플레이어 속도 바뀝니다.");
-        }
-    }
-    private void ChangeToSpeed()
-    {
-        switch (PlayerData.Instance._paintCanCount)
+        
+        // 소지 수량 대비 플레이어 속도 재세팅
+        switch (_count)
         {
             case 0:
                 PlayerData.Instance._playerSpeed = 3.5f;
@@ -56,6 +45,10 @@ public class PaintCan: MonoBehaviour
                 break;
         }
 
-        Debug.Log($"PaintCan : 소지 캔 수량 {PlayerData.Instance._paintCanCount} 플레이어 속도 {PlayerData.Instance._playerSpeed}");
+        if (PlayerData.Instance._paintCanCount != _count)
+        {
+            Debug.Log($"PaintCan : 소지 페인트 수 달라졌습니다, 플레이어 속도 바뀝니다.");
+        }
+        PlayerData.Instance._paintCanCount = _count;
     }
 }

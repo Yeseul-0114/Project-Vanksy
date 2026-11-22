@@ -16,10 +16,13 @@ public class AngerState : StateBase
 
     public override void Update()
     {
+        if (_neiController.IsArrived()) // 마지막 범행현장 도착 했다면
+        {
+            _neiController.StartCoroutine(_neiController.AngerToReturn());
+        }
     }
 
     public override void Exit()
     {
-        PlayerData.Instance._isDiscover =  false; // 혐의 풀림
     }
 }
