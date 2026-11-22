@@ -2,18 +2,21 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class NeighborController : MonoBehaviour, IStateEvent
 {
+    [SerializeField] private PaintCan _paintCan;
     [SerializeField] private PosTarget _posTarget;
     [SerializeField] private float _detectRange;
+    [SerializeField] private Image[] _paintCanImages;
 
   //  private float _KeepPlayerSpeed;
     public bool _arrest; // 범인 잡았니
-    private Transform _playerTaget; // 범인
+    private GameObject _Taget; // 범인
     internal bool _playerMarking; // 타겟 감지했음
-    internal Transform _lastBildingPos; // 범행현장
+    internal Vector3 _lastBildingPos; // 범행현장
     
     internal NavMeshAgent _neighborAgent;
     internal Vector3 _targetDirection; // 목적지 좌표. 
@@ -61,6 +64,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
     
     //========================================================
     
+    //부채꼴 
     // 트리거로 원형 감지 + P 포지션 값 저장
     // 주민 앞 기준 백터 내적 값 설정
     // 내적 값 범위 안에 주민 포지션이 있는지 검사
@@ -71,10 +75,10 @@ public class NeighborController : MonoBehaviour, IStateEvent
         // 주민이고, 페인트 모드라면.
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && PlayerData.Instance._isPaintMode)
         {
-            Debug.Log($"{other.gameObject.name}가 범인을 발견했습니다.");
-            _lastBildingPos = other.transform;
+            Debug.Log($"{gameObject.name}가 범인을 발견했습니다.");
+            _lastBildingPos = other.transform.position;
             _playerMarking = true;
-            _playerTaget = other.transform;
+            _Taget = other.gameObject;
         }
     }
 
@@ -94,43 +98,53 @@ public class NeighborController : MonoBehaviour, IStateEvent
 
     public void ChasePlayer() // 플레이어 쫒기
     {
-        float distance = Vector3.Distance(transform.position,_playerTaget.position);
-
-        if (distance <= _detectRange) // 감지범위 밖- 놓침
+        float distance = Vector3.Distance(transform.position,_Taget.transform.position);
+ 
+        if (distance >= _detectRange) // 감지범위 밖- 놓침
         {
             _arrest = false;
-            _neighborAgent.ResetPath();
             _playerMarking = false;
             SetState(Anger);
         }
-        _neighborAgent.SetDestination(_playerTaget.position); // 플레이어를 타겟으로 쫒아감.
-        
-        /*if (!_neighborAgent.pathPending && _neighborAgent.remainingDistance <= _neighborAgent.stoppingDistance) //잡았음
+        _neighborAgent.SetDestination(_Taget.transform.position); // 플레이어를 타겟으로 쫒아감.
+    }
+    
+    private void OnCollisionEnter(Collision collision) // 범인 검거
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player") && _playerMarking)
         {
             _playerMarking = false;
             _arrest = true;
-            _player.moveSpeed = 0;
-            SetState(Anger);
-        }*/
+            PlayerData.Instance._playerSpeed = 0;
+            SetState(_anger);
+        }
     }
-
+    
+    //==================================================
     public IEnumerator AfterAnger()
     {
-        yield return new WaitForSeconds(3f);
         if (_arrest) // 잡았다면
         {
-            Debug.Log("범인 검거함!");
-            // 건물 페인트 초기화
             // 페인트 통 1개 압수
+            for (int i = _paintCanImages.Length-1; i < 0; i--)
+            {
+                if (_paintCanImages[i].fillAmount >= 1)
+                {
+                    _paintCanImages[i].fillAmount = 0;
+                    Debug.Log("범인 검거! 페인트통 1개를 압수합니다.");
+                    break;
+                }
+            }
         }
         else // 놓쳤다면
         {
             Debug.Log("범인 놓쳤음!");
-            //건물 페인트 초기화
         }
-       // PlayerData.Instance._playerSpeed = _KeepPlayerSpeed;
+        yield return new WaitForSeconds(1.5f);
+        _paintCan.ChackCanCount();
         _animator.SetBool("isAnger", false);
-        _neighborAgent.SetDestination(_lastBildingPos.position);
+        _neighborAgent.SetDestination(_lastBildingPos);
+        
        // _animator.SetBool("isDone", true);
        // StartCoroutine(AngerToReturn());
     }

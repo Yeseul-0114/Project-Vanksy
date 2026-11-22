@@ -18,7 +18,7 @@ public class PaintCan: MonoBehaviour
     {
         _modeController.MoveModeEvent -= ChackCanCount;
     }
-    private void ChackCanCount() // 이동모드때 검사, 상점에서 구비했을 때 검사.
+    public void ChackCanCount() // 이동모드때 검사, 상점에서 구비했을 때 검사.
     {
         Debug.Log("PaintCan : 남은 페인트통 검사 시작 ");
         int _count = 0;

@@ -61,7 +61,7 @@ public class ReFillPaint : MonoBehaviour
         {
             if (_paintCan[i].fillAmount < 1 && _paintCan[i-1].fillAmount >=1)
             {
-                _paintCan[i].fillAmount += Time.deltaTime;
+                _paintCan[i].fillAmount += Time.deltaTime/3;
             }
         }
     }

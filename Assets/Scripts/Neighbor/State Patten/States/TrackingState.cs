@@ -18,7 +18,6 @@ public class TrackingState : StateBase
     public override void Update()
     {
         _neiController.ChasePlayer();
-        // 속도 빨라지기?
     }
 
     public override void Exit()
