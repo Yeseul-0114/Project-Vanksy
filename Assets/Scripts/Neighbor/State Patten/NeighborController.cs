@@ -7,17 +7,17 @@ using Random = UnityEngine.Random;
 
 public class NeighborController : MonoBehaviour, IStateEvent
 {
-    [SerializeField] private PaintCan _paintCan;
+    [SerializeField] private PaintTin _paintCan;
     [SerializeField] private PosTarget _posTarget;
     [SerializeField] private Image[] _paintCanImages;
     [SerializeField] private Image _miniMap;
     [SerializeField] private Material _resetMR;
+    [SerializeField] private float _catchRange = 0.7f; // 잠기 판정범위
     
    // public bool _arrest; // 범인 잡았니
     private GameObject _Taget; // 범인
     internal bool _playerMarking; // 타겟 감지했음
     // internal Vector3 _lastBildingPos; // 범행현장
-    private float _catchRange = 0.7f; // 잠기 판정범위
     private float _detectRange = 3f; // 추격 판정 범위
 
     private Color _keepColor;
@@ -127,6 +127,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
         else if (distance <= _catchRange) // 잡았음.
         {
             PlayerData.Instance._arrest = true;
+            PlayerData.Instance._catchCount++;
             _playerMarking = false;
             PlayerData.Instance._playerSpeed = 0; 
             
