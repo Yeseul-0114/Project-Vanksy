@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 // 두 컴포넌트가 있어야 가능.
 [RequireComponent(typeof(Building), typeof(Painting))]
 public class PaintJudge : MonoBehaviour
 {
-    [SerializeField] private float _clearRatio = 0.5f;
+    [SerializeField] private Image[] _paintTin;
+    [SerializeField] private float _clearRatio = 0.2f;
 
     private Building _building;
     private Painting _painting;
@@ -109,15 +112,41 @@ public class PaintJudge : MonoBehaviour
         }
 
         Ratio = (float)count / currnet.Length;
-        Debug.Log($"{name} : {Ratio:P1}");
+        
+        // 건물 1개 클리어 : Ratio = 0.2 // 1통당 건물 1개 
+        // SpendPaint();
+        
+        Debug.Log($"채색 퍼센트 {Ratio * 400}");
 
+        if ((Ratio * 100) >= 10) _building._minimap.color = Color.darkOrange;
         if (Ratio >= _clearRatio) StartCoroutine(ClearBuilding());
     }
 #endregion
 
+private void SpendPaint()
+{
+    if (_paintTin[0].fillAmount <= 0)
+    {
+        Debug.Log("페인트 없음.");
+        // 페인트 중지 -> "페인트가 없습니다" 메시지 띄우기.
+    }
+    else
+    {
+        for (int i = _paintTin.Length-1; i >= 0; i--)
+        {
+            if (_paintTin[i].fillAmount != 0 && )
+            {
+                _paintTin[i].fillAmount -= Ratio * 2;
+            }
+        }
+    }
+}
+
 #region Clear
     private IEnumerator ClearBuilding()
     {
+        // TODO: 현 단계까지 클리어 로직 호출 확인. 이후 테스트 필요.
+        
         _isCleared = true;
 
         // 종료 이벤트가 물리 콜백에서 와도 아래 순서가 유지되도록, 물리 단계를 벗어날 때까지 대기
@@ -131,7 +160,7 @@ public class PaintJudge : MonoBehaviour
         _building._isClear = true;
         _building._minimap.color = Color.darkGreen;
         PlayerData.Instance._clearBildings++;
-        OnPaintClear?.Invoke();
+        // OnPaintClear?.Invoke();
     }
 #endregion
 

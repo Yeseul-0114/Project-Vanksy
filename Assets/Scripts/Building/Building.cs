@@ -16,7 +16,6 @@ public class Building : MonoBehaviour
     private void Awake()
     {
         CachaComponent();
-        
     }
 
     private void CachaComponent()
@@ -42,7 +41,7 @@ public class Building : MonoBehaviour
     private void OnPaint()
     {
         _painting.enabled = true;
-        _minimap.color = Color.darkSalmon;
+        _minimap.color = Color.softYellow;
         if (!PlayerData.Instance._isStorage)
         {
             PlayerData.Instance._lastBuildingMR = _meshRenderer;

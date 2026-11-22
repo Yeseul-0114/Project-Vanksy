@@ -12,19 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6379fde1-58b6-4c29-bdd0-9ffb527f6fc2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-Vanksy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prafeps/Bildings/Tree1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prafeps/Bildings/Tree1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenses/Ingame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenses/Ingame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenses/Ingame/NavMesh-ground.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenses/Ingame/NavMesh-ground.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenses/Ingame/NavMesh-ground.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenses/Ingame/NavMesh-ground.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Building/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/MiniMapCol.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building/MiniMapCol.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Neighbor/State Patten/NeighborController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Neighbor/State Patten/NeighborController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/PointManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/PointManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/ReFillPaint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painting/ReFillPaint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ModeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ModeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PaintCan.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PaintCan.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintJudge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painting/PaintJudge.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

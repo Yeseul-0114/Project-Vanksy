@@ -162,16 +162,21 @@ public class NeighborController : MonoBehaviour, IStateEvent
 
     public IEnumerator AngerToReturn()
     {
-        // 마지막 건물 리셋시키기
-        PlayerData.Instance._lastBuildingMR.material = _resetMR;
-        if (PlayerData.Instance._lastBilding._isClear)
+        if (!PlayerData.Instance._lastBilding._isClear)
+        {
+            PlayerData.Instance._lastBuildingMR.material = _resetMR;
+            PlayerData.Instance._lastBilding._minimap.color = Color.darkGray;
+        }
+        else
+        {
+            Debug.Log("이미 페인트 범벅이라 돌이킬 수 없습니다... 주민은 슬퍼합니다");
+        }
+        
+        /*if (PlayerData.Instance._lastBilding._isClear)
         {
             PlayerData.Instance._lastBilding._isClear = false;
             PlayerData.Instance._clearBildings--;
-        }
-        
-        PlayerData.Instance._lastBilding._minimap.color = Color.darkGray;
-        
+        }*/
         yield return new WaitForSeconds(2f);
         SetState(Walking);
     }

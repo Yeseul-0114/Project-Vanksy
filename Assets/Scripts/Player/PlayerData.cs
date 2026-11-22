@@ -18,6 +18,9 @@ public class PlayerData : MonoBehaviour
     public bool _isStorage;
     //--------------------------------------------------
 
+    private int _buildingCount = 18;
+    private int _tree = 6;
+    
     public int _catchCount = 0;
     public int _clearBildings = 0;
     public int _UseingStorage = 0;
@@ -33,8 +36,12 @@ public class PlayerData : MonoBehaviour
         _isDiscover = false;
     }
 
-    
-    
+    private int Ratio()
+    {
+        return _clearBildings / (_buildingCount + _tree) * 100;
+    }
+
+
     //--------------------------------------------------
     private void SetSingleton()
     {
