@@ -89,7 +89,10 @@ public class Painting : MonoBehaviour
         
         float brushPixelSize = _brushSize * _resolution; // 설정한 사이즈 x 픽셀수 = 해당 브러쉬가 차지하는 픽셀 수
         
-        Graphics.DrawTexture(new Rect(pixelUV.x - brushPixelSize * 0.5f ,pixelUV.y - brushPixelSize * 0.5f,brushPixelSize,brushPixelSize), _brushTexture);
+        Graphics.DrawTexture(
+            new Rect(pixelUV.x - brushPixelSize * 0.5f ,pixelUV.y - brushPixelSize * 0.5f,brushPixelSize,brushPixelSize),
+            _brushTexture
+            );
         
         GL.PopMatrix(); // GL.PushMatrix(); 이때 보관한 것 복구_ 둘이 세트.
         RenderTexture.active = null; // 활성 렌더 텍스쳐 해제
