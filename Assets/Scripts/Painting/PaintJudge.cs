@@ -20,12 +20,17 @@ public class PaintJudge : MonoBehaviour
     private bool _isPlayerNear;
     private bool _isPainting;
     private bool _isCleared;
-
+    
     public float Ratio { get; private set; }
     public event Action OnPaintClear;
 
 #region UnityEventMethods
-    private void Awake() => CacheComponents();
+
+private void Awake()
+{
+    CacheComponents();
+}
+
     private void OnEnable() => SubscribePaintEvents();
     private void OnTriggerEnter(Collider other) => SetPlayerNear(other, true);
     private void OnTriggerExit(Collider other) => SetPlayerNear(other, false);
@@ -51,7 +56,6 @@ public class PaintJudge : MonoBehaviour
     }
 
     private void TakeInitPhoto()
-    
     {
         _paint = GetComponent<MeshRenderer>().material.mainTexture as RenderTexture;
         _before = TakePhoto(); // 이전꺼 저장
@@ -64,7 +68,7 @@ public class PaintJudge : MonoBehaviour
         _painting._modeController.PaintModeEvent += OnPaintStart;
         _painting._modeController.PaintModeEvent += PopupRatioInfo;
         _painting._modeController.MoveModeEvent += OnPaintEnd;
-        _painting._modeController.MoveModeEvent += CloseRatioUI;
+       // _painting._modeController.MoveModeEvent += CloseRatioUI;
     }
 
     private void UnsubscribePaintEvents()
@@ -72,7 +76,7 @@ public class PaintJudge : MonoBehaviour
         _painting._modeController.PaintModeEvent -= OnPaintStart;
         _painting._modeController.PaintModeEvent -= PopupRatioInfo;
         _painting._modeController.MoveModeEvent -= OnPaintEnd;
-        _painting._modeController.MoveModeEvent -= CloseRatioUI;
+       // _painting._modeController.MoveModeEvent -= CloseRatioUI;
     }
 
     // 이벤트는 모든 건물이 받으므로, 플레이어가 앞에 있는 건물만 시작
@@ -96,7 +100,7 @@ public class PaintJudge : MonoBehaviour
     private void TryPeriodicJudge()
     {
         // 페인팅 중이면서 30 프레임마다
-        if (_isPainting && Time.frameCount % 30 == 0) TryJudge();
+        if (_isPainting && Time.frameCount % 60 == 0) TryJudge();
     }
 
     private void TryJudge() // 트라이
@@ -119,12 +123,11 @@ public class PaintJudge : MonoBehaviour
         Ratio = (float)count / currnet.Length;
         
         // 건물 1개 클리어 : Ratio = 0.2 // 1통당 건물 1개 
-        // SpendPaint();
+        SpendPaint();
         PaintRatioUI();
         
         Debug.Log($"채색 퍼센트 {Ratio * 400}");
-
-        if ((Ratio * 100) >= 10) _building._minimap.color = Color.darkOrange;
+        
         if (Ratio >= _clearRatio) StartCoroutine(ClearBuilding());
     }
 #endregion
@@ -138,32 +141,57 @@ private void SpendPaint()
     }
     else
     {
-        
+       
     }
 }
 
 private void PopupRatioInfo() => _paintRatioUI.gameObject.SetActive(true);
-private void CloseRatioUI() => _paintRatioUI.gameObject.SetActive(false);
 
+/*private void CloseRatioUI()
+{
+    _paintRatioUI.gameObject.SetActive(false);
+
+    if ((Ratio * 400) >= 1)
+    {
+        _building._minimap.color = Color.softYellow;
+    }
+    else if ((Ratio * 400) >= 40)
+    {
+        _building._minimap.color = Color.darkOrange;
+    }
+    else if ((Ratio * 400) >= 80)
+    {
+        _building._minimap.color = Color.darkGreen;
+    }
+    else if ((Ratio*400 >= 100))
+    {
+        _building._minimap.color = Color.springGreen;
+    }
+}*/
 
 private void PaintRatioUI()
 {
     if (Ratio * 400 >= 0)
     {
-        _paintRatioUI.text = "한 번 작품을 만들어볼까";
+        _paintRatioUI.text = "Painting!!";
         _paintRatioUI.color = Color.azure;
         if (Ratio * 400 >= 20)
         {
-            _paintRatioUI.text = "좀 더 그리는게 좋겠어";
+            _paintRatioUI.text = "hum.... More.";
             _paintRatioUI.color = Color.yellow;
-            if (Ratio * 400 >= 20)
+            if (Ratio * 400 >= 50)
             {
-                _paintRatioUI.text = "좀 더 그리는게 좋겠어";
-                _paintRatioUI.color = Color.yellow;
+                _paintRatioUI.text = "Close!";
+                _paintRatioUI.color = Color.darkOrange;
                 if (Ratio * 400 >= 80)
                 {
-                    _paintRatioUI.text = "완벽해";
+                    _paintRatioUI.text = "Good.";
                     _paintRatioUI.color = Color.dodgerBlue;
+                    if (Ratio * 400 >= 100)
+                    {
+                        _paintRatioUI.text = "Perfect!";
+                        _paintRatioUI.color = Color.purple;
+                    }
                 }
             }
         }
@@ -174,10 +202,7 @@ private void PaintRatioUI()
 #region Clear
     private IEnumerator ClearBuilding()
     {
-        // TODO: 현 단계까지 클리어 로직 호출 확인. 이후 테스트 필요.
-        
         _isCleared = true;
-
         // 종료 이벤트가 물리 콜백에서 와도 아래 순서가 유지되도록, 물리 단계를 벗어날 때까지 대기
         yield return null;
 
@@ -187,8 +212,8 @@ private void PaintRatioUI()
         yield return new WaitForFixedUpdate();
 
         _building._isClear = true;
-        _building._minimap.color = Color.darkGreen;
         PlayerData.Instance._clearBildings++;
+        
         // OnPaintClear?.Invoke();
     }
 #endregion

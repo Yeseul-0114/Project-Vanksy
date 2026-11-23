@@ -6,7 +6,7 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
     [Header("시간 정보")]
-    [SerializeField] private float _playTime = 180;
+    [SerializeField] private float _playTime = 300;
     [SerializeField] private int _dayTime;
     [SerializeField] private int _nightTime;
     

@@ -22,14 +22,14 @@ public class PaintTin: MonoBehaviour
     {
         if (PlayerData.Instance._arrest) return;
         
-        int _count = 0;
+        float _count = 0;
         for (int i = 0; i < _paintCan.Length; i++)
         {
-            if (_paintCan[i].fillAmount > 0) _count++;
+            _count += _paintCan[i].fillAmount;
         }
         
         // 소지 수량 대비 플레이어 속도 재세팅
-        switch (_count)
+        switch ((int)_count)
         {
             case 0:
                 PlayerData.Instance._playerSpeed = 3.5f;
@@ -50,7 +50,7 @@ public class PaintTin: MonoBehaviour
         }
         PlayerData.Instance._paintCanCount = _count;
         
-        if (_paintCan[0].fillAmount < 1 ) PlayerData.Instance._canFill = true;
-        if (_paintCan[2].fillAmount >= 1)  PlayerData.Instance._canFill = false;
+        /*if (_paintCan[0].fillAmount < 1 ) PlayerData.Instance._canFill = true;
+        if (_paintCan[2].fillAmount >= 1)  PlayerData.Instance._canFill = false;*/
     }
 }
