@@ -10,6 +10,7 @@ public class PaintJudge : MonoBehaviour
 {
     [SerializeField] private Image[] _paintTin;
     [SerializeField] private float _clearRatio = 0.2f;
+    [SerializeField] private TextMeshProUGUI _paintRatioUI;
 
     private Building _building;
     private Painting _painting;
@@ -61,13 +62,17 @@ public class PaintJudge : MonoBehaviour
     private void SubscribePaintEvents()
     {
         _painting._modeController.PaintModeEvent += OnPaintStart;
+        _painting._modeController.PaintModeEvent += PopupRatioInfo;
         _painting._modeController.MoveModeEvent += OnPaintEnd;
+        _painting._modeController.MoveModeEvent += CloseRatioUI;
     }
 
     private void UnsubscribePaintEvents()
     {
         _painting._modeController.PaintModeEvent -= OnPaintStart;
+        _painting._modeController.PaintModeEvent -= PopupRatioInfo;
         _painting._modeController.MoveModeEvent -= OnPaintEnd;
+        _painting._modeController.MoveModeEvent -= CloseRatioUI;
     }
 
     // 이벤트는 모든 건물이 받으므로, 플레이어가 앞에 있는 건물만 시작
@@ -115,6 +120,7 @@ public class PaintJudge : MonoBehaviour
         
         // 건물 1개 클리어 : Ratio = 0.2 // 1통당 건물 1개 
         // SpendPaint();
+        PaintRatioUI();
         
         Debug.Log($"채색 퍼센트 {Ratio * 400}");
 
@@ -132,14 +138,37 @@ private void SpendPaint()
     }
     else
     {
-        for (int i = _paintTin.Length-1; i >= 0; i--)
+        
+    }
+}
+
+private void PopupRatioInfo() => _paintRatioUI.gameObject.SetActive(true);
+private void CloseRatioUI() => _paintRatioUI.gameObject.SetActive(false);
+
+
+private void PaintRatioUI()
+{
+    if (Ratio * 400 >= 0)
+    {
+        _paintRatioUI.text = "한 번 작품을 만들어볼까";
+        _paintRatioUI.color = Color.azure;
+        if (Ratio * 400 >= 20)
         {
-            if (_paintTin[i].fillAmount != 0 && )
+            _paintRatioUI.text = "좀 더 그리는게 좋겠어";
+            _paintRatioUI.color = Color.yellow;
+            if (Ratio * 400 >= 20)
             {
-                _paintTin[i].fillAmount -= Ratio * 2;
+                _paintRatioUI.text = "좀 더 그리는게 좋겠어";
+                _paintRatioUI.color = Color.yellow;
+                if (Ratio * 400 >= 80)
+                {
+                    _paintRatioUI.text = "완벽해";
+                    _paintRatioUI.color = Color.dodgerBlue;
+                }
             }
         }
     }
+    
 }
 
 #region Clear
