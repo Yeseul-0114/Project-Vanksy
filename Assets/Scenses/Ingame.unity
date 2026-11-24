@@ -872,7 +872,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2085607124}
   - {fileID: 621125681}
   m_Father: {fileID: 926420604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1588,11 +1587,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 19977174}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &139633173
 NavMeshAgent:
@@ -2832,11 +2834,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 602484445}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &438589107
 NavMeshAgent:
@@ -4048,6 +4053,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1531986246}
     m_Modifications:
+    - target: {fileID: -7670638196022979519, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -7134394785105016132, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -5151492872390713093, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -5069531478518834764, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250163066507786643, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361710834771507933, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788240856288092216, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303906797054990637, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908311948669537042, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4675a6d24529a1a479df31aadb0eb163, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.745
@@ -4137,42 +4178,6 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8908311948669537042, guid: 4675a6d24529a1a479df31aadb0eb163, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: -7670638196022979519, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: -7134394785105016132, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: -5151492872390713093, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: -5069531478518834764, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3250163066507786643, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4361710834771507933, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5788240856288092216, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8303906797054990637, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8908311948669537042, guid: 067e6f80809a30a44a3d3584a91b0fe1, type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
@@ -4345,11 +4350,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1928043491}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &551656343
 NavMeshAgent:
@@ -4948,11 +4956,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1829448830}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &672418326
 NavMeshAgent:
@@ -7193,11 +7204,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 245731469}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &882568428
 NavMeshAgent:
@@ -12131,11 +12145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1091152493}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &1382707013
 NavMeshAgent:
@@ -13193,11 +13210,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 693312119}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &1490363967
 NavMeshAgent:
@@ -14187,11 +14207,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 98f83af38446e684090a0704a7c78d10, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 1256612964}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &1617905471
 NavMeshAgent:
@@ -16820,11 +16843,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dfd6b7f65986549975c4b2fc967043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeighborController
-  _paintCan: {fileID: 0}
+  _paintCan: {fileID: 133926991}
   _posTarget: {fileID: 11400000, guid: 02f4b9d7b1798a149aaf0f506c8a064b, type: 2}
-  _paintCanImages: []
-  _miniMap: {fileID: 0}
-  _resetMR: {fileID: 0}
+  _paintCanImages:
+  - {fileID: 2062078598}
+  - {fileID: 68142711}
+  - {fileID: 667863057}
+  _miniMap: {fileID: 504782285}
+  _resetMR: {fileID: 2100000, guid: 52eec5e0b0055564d9d2bae3b008e1ae, type: 2}
   _catchRange: 0.7
 --- !u!195 &1991352926
 NavMeshAgent:
@@ -17243,81 +17269,6 @@ MonoBehaviour:
   - {fileID: 667863057}
   _clearRatio: 0.2
   _paintRatioUI: {fileID: 1119345533}
---- !u!1 &2085607123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2085607124}
-  - component: {fileID: 2085607126}
-  - component: {fileID: 2085607125}
-  m_Layer: 13
-  m_Name: BG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2085607124
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085607123}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 70162222}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00018310547, y: 0}
-  m_SizeDelta: {x: 1120, y: 680}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2085607125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085607123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.4627451}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2085607126
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085607123}
-  m_CullTransparentMesh: 1
 --- !u!1 &2110591400
 GameObject:
   m_ObjectHideFlags: 0
@@ -18326,7 +18277,7 @@ PrefabInstance:
     - target: {fileID: 4459972993048228870, guid: ad7ef5e3ba8a0df4ca0d1dc4b2fc4c4a, type: 3}
       propertyPath: _modeController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2140081482}
     - target: {fileID: 5362992313718047965, guid: ad7ef5e3ba8a0df4ca0d1dc4b2fc4c4a, type: 3}
       propertyPath: _ClearRatio
       value: 
@@ -18334,7 +18285,7 @@ PrefabInstance:
     - target: {fileID: 6083936602815780544, guid: ad7ef5e3ba8a0df4ca0d1dc4b2fc4c4a, type: 3}
       propertyPath: _modeController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2140081482}
     - target: {fileID: 7248903453635565359, guid: ad7ef5e3ba8a0df4ca0d1dc4b2fc4c4a, type: 3}
       propertyPath: m_Name
       value: '[Canvas] Button'
