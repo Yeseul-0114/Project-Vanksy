@@ -150,50 +150,51 @@ private void CloseRatioUI()
 {
     _paintRatioUI.gameObject.SetActive(false);
 
-    if ((Ratio * 400) >= 1)
+    if ((Ratio*400 >= 100))
     {
-        _building._minimap.color = Color.softYellow;
-    }
-    else if ((Ratio * 400) >= 40)
-    {
-        _building._minimap.color = Color.darkOrange;
+        _building._minimap.color = Color.springGreen;
     }
     else if ((Ratio * 400) >= 80)
     {
         _building._minimap.color = Color.darkGreen;
     }
-    else if ((Ratio*400 >= 100))
+    else if ((Ratio * 400) >= 40)
     {
-        _building._minimap.color = Color.springGreen;
+        _building._minimap.color = Color.darkOrange;
+    }
+    else if ((Ratio * 400) >= 1)
+    {
+        _building._minimap.color = Color.softYellow;
     }
 }
 
 private void PaintRatioUI()
 {
-    if (Ratio * 400 >= 0)
+    if (Ratio * 400 >= 100)
     {
-        _paintRatioUI.text = "Painting!!";
-        _paintRatioUI.color = Color.azure;
-    }
-    else if (Ratio * 400 >= 20)
-    {
-        _paintRatioUI.text = "hum.... More.";
-        _paintRatioUI.color = Color.yellow;
-    }
-    else if (Ratio * 400 >= 50)
-    {
-        _paintRatioUI.text = "Close!";
-        _paintRatioUI.color = Color.darkOrange;
+        _paintRatioUI.text = "Perfect!";
+        _paintRatioUI.color = Color.purple;
+       
     }
     else if (Ratio * 400 >= 80)
     {
         _paintRatioUI.text = "Good.";
         _paintRatioUI.color = Color.dodgerBlue;
     }
+    else if (Ratio * 400 >= 50)
+    {
+        _paintRatioUI.text = "Close!";
+        _paintRatioUI.color = Color.darkOrange;
+    }
+    else if (Ratio * 400 >= 40)
+    {
+        _paintRatioUI.text = "hum.... More.";
+        _paintRatioUI.color = Color.yellow;
+    }
     else
     {
-        _paintRatioUI.text = "Perfect!";
-        _paintRatioUI.color = Color.purple;
+        _paintRatioUI.text = "Painting!!";
+        _paintRatioUI.color = Color.azure;
     }
     }
 
