@@ -31,6 +31,6 @@ public class InGamePopup : MonoBehaviour
     public void LoadLobyScense()
     {
         _MiniMap.SetActive(false);
-        SceneManager.LoadScene("Lobby");
+       // SceneManager.LoadScene("Lobby");
     }
 }
