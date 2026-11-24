@@ -74,14 +74,9 @@ public class NeighborController : MonoBehaviour, IStateEvent
 
     //========================================================
     
-    //부채꼴 
-    // 트리거로 원형 감지 + P 포지션 값 저장
-    // 주민 앞 기준 백터 내적 값 설정
-    // 내적 값 범위 안에 주민 포지션이 있는지 검사
-    // 추가로 P 와 주민 사이에 벽이 있는지 레이 쏴서 검사.
-    
     void OnTriggerEnter(Collider other)
     {
+        //  P 와 주민 사이에 벽이 있는지 레이 쏴서 검사 -> 건물이 가로막고있으면 감지x 추가구현 하기
         // 주민이고, 페인트 모드라면.
         if (other.gameObject.layer == LayerMask.NameToLayer("Player") && PlayerData.Instance._isPaintMode)
         {
@@ -147,17 +142,17 @@ public class NeighborController : MonoBehaviour, IStateEvent
     //==================================================
     public IEnumerator AfterAnger()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
+        _animator.SetBool("Finish",true);
+        
         if (PlayerData.Instance._arrest)
         {
             PlayerData.Instance._arrest = false;
             _paintCan.ChackCanCount(); // 여기서 플레이어 다시 움직임 가능
         }
-        
-        _neighborAgent.stoppingDistance = 0.2f;
-        _neighborAgent.SetDestination(PlayerData.Instance._lastBuildingMR.transform.position);
-       // _neighborAgent.SetDestination(_lastBildingPos); // 마지막 건물 포지션으로 가기
         PlayerData.Instance._isDiscover =  false; // 혐의 풀림
+        _neighborAgent.stoppingDistance = 0.2f;
+        _neighborAgent.SetDestination(PlayerData.Instance._lastBuildingMR.transform.position); // 마지막 건물 포지션으로 가기
     }
 
     public IEnumerator AngerToReturn()
@@ -177,7 +172,7 @@ public class NeighborController : MonoBehaviour, IStateEvent
             PlayerData.Instance._lastBilding._isClear = false;
             PlayerData.Instance._clearBildings--;
         }*/
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         SetState(Walking);
     }
 }

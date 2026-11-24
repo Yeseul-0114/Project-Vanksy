@@ -22,7 +22,6 @@ public class PaintJudge : MonoBehaviour
     private bool _isCleared;
     
     public float Ratio { get; private set; }
-    public event Action OnPaintClear;
 
 #region UnityEventMethods
 
@@ -68,7 +67,7 @@ private void Awake()
         _painting._modeController.PaintModeEvent += OnPaintStart;
         _painting._modeController.PaintModeEvent += PopupRatioInfo;
         _painting._modeController.MoveModeEvent += OnPaintEnd;
-       // _painting._modeController.MoveModeEvent += CloseRatioUI;
+        _painting._modeController.MoveModeEvent += CloseRatioUI;
     }
 
     private void UnsubscribePaintEvents()
@@ -76,7 +75,7 @@ private void Awake()
         _painting._modeController.PaintModeEvent -= OnPaintStart;
         _painting._modeController.PaintModeEvent -= PopupRatioInfo;
         _painting._modeController.MoveModeEvent -= OnPaintEnd;
-       // _painting._modeController.MoveModeEvent -= CloseRatioUI;
+        _painting._modeController.MoveModeEvent -= CloseRatioUI;
     }
 
     // 이벤트는 모든 건물이 받으므로, 플레이어가 앞에 있는 건물만 시작
@@ -141,13 +140,13 @@ private void SpendPaint()
     }
     else
     {
-       
+       // 페인트 용량 줄어드는 것 구현
     }
 }
 
 private void PopupRatioInfo() => _paintRatioUI.gameObject.SetActive(true);
 
-/*private void CloseRatioUI()
+private void CloseRatioUI()
 {
     _paintRatioUI.gameObject.SetActive(false);
 
@@ -167,7 +166,7 @@ private void PopupRatioInfo() => _paintRatioUI.gameObject.SetActive(true);
     {
         _building._minimap.color = Color.springGreen;
     }
-}*/
+}
 
 private void PaintRatioUI()
 {
@@ -175,29 +174,28 @@ private void PaintRatioUI()
     {
         _paintRatioUI.text = "Painting!!";
         _paintRatioUI.color = Color.azure;
-        if (Ratio * 400 >= 20)
-        {
-            _paintRatioUI.text = "hum.... More.";
-            _paintRatioUI.color = Color.yellow;
-            if (Ratio * 400 >= 50)
-            {
-                _paintRatioUI.text = "Close!";
-                _paintRatioUI.color = Color.darkOrange;
-                if (Ratio * 400 >= 80)
-                {
-                    _paintRatioUI.text = "Good.";
-                    _paintRatioUI.color = Color.dodgerBlue;
-                    if (Ratio * 400 >= 100)
-                    {
-                        _paintRatioUI.text = "Perfect!";
-                        _paintRatioUI.color = Color.purple;
-                    }
-                }
-            }
-        }
     }
-    
-}
+    else if (Ratio * 400 >= 20)
+    {
+        _paintRatioUI.text = "hum.... More.";
+        _paintRatioUI.color = Color.yellow;
+    }
+    else if (Ratio * 400 >= 50)
+    {
+        _paintRatioUI.text = "Close!";
+        _paintRatioUI.color = Color.darkOrange;
+    }
+    else if (Ratio * 400 >= 80)
+    {
+        _paintRatioUI.text = "Good.";
+        _paintRatioUI.color = Color.dodgerBlue;
+    }
+    else
+    {
+        _paintRatioUI.text = "Perfect!";
+        _paintRatioUI.color = Color.purple;
+    }
+    }
 
 #region Clear
     private IEnumerator ClearBuilding()

@@ -8,6 +8,7 @@ public class AngerState : StateBase
 
     public override void Enter()
     {
+        _neiController._animator.SetBool("Target", false);
         _neiController._neighborAgent.ResetPath();
         Debug.Log("AngerState : 주민은 분노합니다.");
         _neiController.StartCoroutine(_neiController.AfterAnger());
@@ -25,5 +26,6 @@ public class AngerState : StateBase
 
     public override void Exit()
     {
+        _neiController._animator.SetBool("Finish", false);
     }
 }
