@@ -196,7 +196,7 @@ private void PaintRatioUI()
         _paintRatioUI.text = "Painting!!";
         _paintRatioUI.color = Color.azure;
     }
-    }
+}
 
 #region Clear
     private IEnumerator ClearBuilding()
