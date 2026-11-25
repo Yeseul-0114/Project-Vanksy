@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4115c539655780a46ba8bcfd8efddacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModeButton
-  _modeController: {fileID: 0}
+  _modeController: {fileID: 5029123450426052339}
   _canPaint: 0
 --- !u!1 &4522289323674428548
 GameObject:
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4115c539655780a46ba8bcfd8efddacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModeButton
-  _modeController: {fileID: 0}
+  _modeController: {fileID: 5029123450426052339}
   _canPaint: 0
 --- !u!1 &5949388754613151934
 GameObject:
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 7149082454324716155}
   - component: {fileID: 8271190311039726670}
   - component: {fileID: 3560296144097429846}
-  - component: {fileID: 8048626486736609305}
+  - component: {fileID: 5029123450426052339}
   m_Layer: 5
   m_Name: '[Canvas] Button'
   m_TagString: Untagged
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8048626486736609305
+--- !u!114 &5029123450426052339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7248903453635565359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97842115da07e2e408821d4a7c538789, type: 3}
+  m_Script: {fileID: 11500000, guid: 7480ef588c8177744ab0522a9aa38ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModeController
   _PaintButton: {fileID: 1987161601520037551}

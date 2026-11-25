@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Building
   _modeController: {fileID: 0}
   _playermode: {fileID: 0}
+  _minimap: {fileID: 0}
   _isClear: 0
 --- !u!135 &3132004078315450916
 SphereCollider:
