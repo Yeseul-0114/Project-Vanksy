@@ -20,6 +20,8 @@ public class PaintJudge : MonoBehaviour
     private bool _isPlayerNear;
     private bool _isPainting;
     private bool _isCleared;
+
+    private float _cachePaint;
     
     public float Ratio { get; private set; }
 
@@ -79,7 +81,11 @@ private void Awake()
     }
 
     // 이벤트는 모든 건물이 받으므로, 플레이어가 앞에 있는 건물만 시작
-    private void OnPaintStart() => _isPainting = _isPlayerNear;
+    private void OnPaintStart()
+    {
+        _isPainting = _isPlayerNear;
+        _cachePaint = PlayerData.Instance._leftPaint;
+    }
 
     private void OnPaintEnd()
     {
@@ -133,14 +139,34 @@ private void Awake()
 
 private void SpendPaint()
 {
-    if (_paintTin[0].fillAmount <= 0)
+    if (PlayerData.Instance._leftPaint <= 0)
     {
         Debug.Log("페인트 없음.");
         // 페인트 중지 -> "페인트가 없습니다" 메시지 띄우기.
     }
     else
     {
-       // 페인트 용량 줄어드는 것 구현
+        float currnet;
+        currnet = _cachePaint - Ratio;
+        
+        if (currnet >= 2)
+        {
+            _paintTin[0].fillAmount = 1;
+            _paintTin[1].fillAmount = 1;
+            _paintTin[2].fillAmount = currnet-2;
+        }
+        else if (currnet >= 1)
+        {
+            _paintTin[0].fillAmount = 1;
+            _paintTin[1].fillAmount = currnet-1;
+            _paintTin[2].fillAmount = 0;
+        }
+        else
+        {
+            _paintTin[0].fillAmount = currnet;
+            _paintTin[1].fillAmount = 0;
+            _paintTin[2].fillAmount = 0;
+        }
     }
 }
 

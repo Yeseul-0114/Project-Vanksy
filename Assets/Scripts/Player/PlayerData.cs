@@ -17,7 +17,7 @@ public class PlayerData : MonoBehaviour
     public bool _arrest; // 잡혔는가?_ 이때는 움직일 수 없음.
     
     
-    public float _paintCanCount = 1;
+    public float _leftPaint = 1;
     public bool _isStorage;
     //--------------------------------------------------
 

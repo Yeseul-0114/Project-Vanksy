@@ -28,7 +28,7 @@ public class ReFillPaint : MonoBehaviour
 
     public void UseingStorage()
     {
-        if (PlayerData.Instance._paintCanCount > 2)
+        if (PlayerData.Instance._leftPaint > 2)
         {
             _storagePopup[0].SetActive(true);
             Debug.Log("페인트를 더 들고다닐 손이 없을텐데요. 부지런히 칠하세요!");
