@@ -8,10 +8,11 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Building), typeof(Painting))]
 public class PaintJudge : MonoBehaviour
 {
-    [SerializeField] private Image[] _paintTin;
+    [SerializeField] public Image[] _paintTin;
     [SerializeField] private float _clearRatio = 0.2f;
-    [SerializeField] private TextMeshProUGUI _paintRatioUI;
-
+    [SerializeField] public TextMeshProUGUI _paintRatioUI;
+    [SerializeField] public ModeController _modeController;
+    
     private Building _building;
     private Painting _painting;
     private SphereCollider _trigger;
@@ -22,6 +23,8 @@ public class PaintJudge : MonoBehaviour
     private bool _isCleared;
 
     private float _cachePaint;
+    private float _currnetPaint;
+    
     
     public float Ratio { get; private set; }
 
@@ -104,7 +107,7 @@ private void Awake()
 #region Judge
     private void TryPeriodicJudge()
     {
-        // 페인팅 중이면서 30 프레임마다
+        // 페인팅 중이면서 60 프레임마다
         if (_isPainting && Time.frameCount % 60 == 0) TryJudge();
     }
 
@@ -131,7 +134,7 @@ private void Awake()
         SpendPaint();
         PaintRatioUI();
         
-        Debug.Log($"채색 퍼센트 {Ratio * 400}");
+        Debug.Log($"채색 퍼센트 {Ratio * 400} %");
         
         if (Ratio >= _clearRatio) StartCoroutine(ClearBuilding());
     }
@@ -142,30 +145,26 @@ private void SpendPaint()
     if (PlayerData.Instance._leftPaint <= 0)
     {
         Debug.Log("페인트 없음.");
-        // 페인트 중지 -> "페인트가 없습니다" 메시지 띄우기.
+        _modeController.MoveMode();
     }
     else
     {
-        float currnet;
-        currnet = _cachePaint - Ratio;
+        _currnetPaint = _cachePaint - Ratio * 2;
         
-        if (currnet >= 2)
+        if (_currnetPaint > 2f)
         {
-            _paintTin[0].fillAmount = 1;
-            _paintTin[1].fillAmount = 1;
-            _paintTin[2].fillAmount = currnet-2;
+            _paintTin[0].fillAmount = 1f;
+            _paintTin[1].fillAmount = 1f;
+            _paintTin[2].fillAmount = (_currnetPaint - 2f);
         }
-        else if (currnet >= 1)
+        else if (_currnetPaint > 1f)
         {
-            _paintTin[0].fillAmount = 1;
-            _paintTin[1].fillAmount = currnet-1;
-            _paintTin[2].fillAmount = 0;
+            _paintTin[0].fillAmount = 1f;
+            _paintTin[1].fillAmount = _currnetPaint - 1f;
         }
         else
         {
-            _paintTin[0].fillAmount = currnet;
-            _paintTin[1].fillAmount = 0;
-            _paintTin[2].fillAmount = 0;
+            _paintTin[0].fillAmount = _currnetPaint;
         }
     }
 }

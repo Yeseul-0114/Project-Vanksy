@@ -46,6 +46,10 @@ public class ReFillPaint : MonoBehaviour
 
     private void closePopup()
     {
+        _Click.action.Disable();
+        _Click.action.performed -= StartFill;
+        _Click.action.canceled -= StopFill;
+        
         _storagePopup[0].SetActive(false);
         _storagePopup[1].SetActive(false);
     }
