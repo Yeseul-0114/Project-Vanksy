@@ -40,7 +40,7 @@ public class ReFillPaint : MonoBehaviour
             PlayerData.Instance._UseingStorage++;
             _Click.action.Enable();
             _Click.action.performed += StartFill;
-            _Click.action.canceled += StopFill;
+            _Click.action.canceled += StartFill;
         }
     }
 

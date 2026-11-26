@@ -142,7 +142,7 @@ private void Awake()
 
 private void SpendPaint()
 {
-    if (PlayerData.Instance._leftPaint <= 0)
+    if (PlayerData.Instance._leftPaint <= 0 || _paintTin[0].fillAmount <= 0)
     {
         Debug.Log("페인트 없음.");
         _modeController.MoveMode();
