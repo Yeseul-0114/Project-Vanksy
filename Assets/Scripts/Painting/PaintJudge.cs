@@ -107,8 +107,8 @@ private void Awake()
 #region Judge
     private void TryPeriodicJudge()
     {
-        // 페인팅 중이면서 60 프레임마다
-        if (_isPainting && Time.frameCount % 60 == 0) TryJudge();
+        // 페인팅 중이면서 90 프레임마다
+        if (_isPainting && Time.frameCount % 90 == 0) TryJudge();
     }
 
     private void TryJudge() // 트라이
@@ -134,7 +134,7 @@ private void Awake()
         SpendPaint();
         PaintRatioUI();
         
-        Debug.Log($"채색 퍼센트 {Ratio * 400} %");
+        Debug.Log($"채색 퍼센트 {Ratio * 4 :P0}");
         
         if (Ratio >= _clearRatio) StartCoroutine(ClearBuilding());
     }
